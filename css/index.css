@@ -21,14 +21,18 @@ h1{
 }
 
 .image{
-    width:100px; 
-    height:100px;
+    width:90px; 
+    height:90px;
     border-radius:50px;
     position: absolute;
-    top:3%;
+    top:2%;
     left:2%;
 }
-
+.name{
+    position: absolute;
+    top:1%;
+    left:30%;
+}
 .top{
     background-color:darkorange;
     border-radius: 50px;
@@ -56,34 +60,35 @@ p{
 
 .a1{
     position: absolute;
-    top:8%;
+    top:6%;
     left:55%;
-    font-size: 30px;
+    font-size: 35px;
+    text-decoration: none;
 
 }
 
 .a2{
     position: absolute;
-    top:8%;
+    top:6%;
     left:65%;
-    font-size: 30px;
-
+    font-size: 35px;
+    text-decoration: none;
 }
 
 .a3{
     position: absolute;
-    top:8%;
+    top:6%;
     left:75%;
-    font-size: 30px;
-
+    font-size: 35px;
+    text-decoration: none;
 }
 
 
 .a4{
     position: absolute;
-    top:8%;
+    top:6%;
     left:85%;
-    font-size: 30px;
-
+    font-size: 35px;
+    text-decoration: none;    
 }
 
