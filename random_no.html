@@ -1,0 +1,66 @@
+<html>
+        <link rel="stylesheet" href="css/random.css " type="text/css">
+<head>
+        
+
+</head>
+<body>  <div class="top">
+        <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDyiQUZEn5gm0UIMWFhlOq_w_DQThHzuaSIqIZ1Rj-6j7NG75O" >
+        <h1 class="top_h">G-Oswal</h1>
+        <a href="about.html" class="a1">About</a>
+        <a href="https://github.com/oswalgopal" class="a2">Projects</a>
+        <a href="games.html" class="a3">Games</a>
+        <a href="cv.html" class="a4">CV</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        </div>
+    
+<p class="about"> About the game</p>
+<p class="about_2">This a guessing game which is built to improve the guessing skills of a person based.
+    Now you have any no , whatever you want if the guessed  no is larger than actual no the it will prompt no is larger guess again and vice versa 
+    To play this game hit the play button and then type any of the no.
+     If you guessed it correclty then it will show ur score if not then it
+      will ask for to enter another no and  the game moved on. </p>
+
+
+      <button type="button "  class="play" onclick="ran()">play</button>
+
+
+      <script>
+            var count =10;
+            function ran(){
+                no=prompt("enter no");
+                if(count==0)
+                {
+                    return window.alert("you lose the game");
+                }
+                if(no==Math.floor(Math.random() * (100 - 0 + 1)) + 0)
+                {
+
+                    return window.alert("guessed the right no\nscore:" + count);
+
+                }
+                else if( no>Math.floor(Math.random() * (5 - 0 + 1)) + 0){
+                    window.alert("You guessed the larger no\ntry again");
+                    count=count-1;
+                 ran();
+                }
+                else{
+                window.alert("You guessed the smaller no\ntry again");
+                 count=count-1;
+                 ran();
+                }
+
+
+            }  
+        </script>
+
+
+
+</body>
+</html>
