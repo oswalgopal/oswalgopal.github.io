@@ -46,7 +46,7 @@ body{
     left:55%;
     font-size: 35px;
     text-decoration: none;
-
+    margin: 10px 10px 10px 10px;
 }
 
 .a2{
@@ -54,6 +54,7 @@ body{
     top:6%;
     left:65%;
     font-size: 35px;
+    margin: 10px 10px 10px 10px;
     text-decoration: none;
 }
 
@@ -61,6 +62,7 @@ body{
     position: absolute;
     top:6%;
     left:75%;
+    margin: 10px 10px 10px 10px;
     font-size: 35px;
     text-decoration: none;
 }
@@ -68,6 +70,7 @@ body{
 
 .a4{
     position: absolute;
+    margin: 10px 10px 10px 10px;
     top:6%;
     left:85%;
     font-size: 35px;

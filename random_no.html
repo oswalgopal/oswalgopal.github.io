@@ -33,19 +33,33 @@
 
       <script>
             var count =10;
+            var a=Math.random();
+            var b=Math.random();
+            var c=Math.random();
+            var d=Math.random();
+            var e=Math.random();
+            var f=Math.random();
+
+            a=a*10 + b*100 - c*30 + d*50 -e*70 +f*20 ;
+            a= Math.abs(a);
+            if(a>100){
+                a=a-100;
+            }
+            var r =a.toFixed(2);
             function ran(){
                 no=prompt("enter no");
+                
                 if(count==0)
                 {
-                    return window.alert("you lose the game");
+                    return window.alert("you lose the game \nThe no was:"+ r);
                 }
-                if(no==Math.floor(Math.random() * (100 - 0 + 1)) + 0)
+                if(no==r)
                 {
 
                     return window.alert("guessed the right no\nscore:" + count);
 
                 }
-                else if( no>Math.floor(Math.random() * (5 - 0 + 1)) + 0){
+                else if( no>r){
                     window.alert("You guessed the larger no\ntry again");
                     count=count-1;
                  ran();
