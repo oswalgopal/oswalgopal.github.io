@@ -4,8 +4,13 @@ body{
     
 }
 
+.hr{
+    position: fixed;
+
+}
+
 .top_h{
-    position: absolute;
+    position: fixed;
     top:2%;
     left:10%;
     font-family: 'Lobster', cursive;
@@ -25,7 +30,7 @@ h1{
     width:90px; 
     height:90px;
     border-radius:50px;
-    position: absolute;
+    position: fixed;
     top:2%;
     left:2%;
 }
@@ -37,7 +42,9 @@ h1{
 .top{
     background-color:darkorange;
     border-radius: 50px;
-    
+    position: fixed;
+    top:0%;
+    padding: 20px 1750px 00px 50px;
 }
 p{
 
@@ -60,7 +67,7 @@ p{
     }
 
 .a1{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:55%;
     font-size: 35px;
@@ -69,7 +76,7 @@ p{
 }
 
 .a2{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:65%;
     font-size: 35px;
@@ -77,7 +84,7 @@ p{
 }
 
 .a3{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:75%;
     font-size: 35px;
@@ -86,10 +93,80 @@ p{
 
 
 .a4{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:85%;
     font-size: 35px;
     text-decoration: none;    
 }
 
+.bottom{
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    position: absolute;
+    bottom:09%;
+    color:white;
+
+    padding-left:1820px;
+
+}
+
+.mob{
+    position: absolute;
+    top:95%;
+    left:10%;
+    color:black;
+    font-size: 25px;
+}
+
+.mail{
+    position: absolute;
+    top:91%;
+    font-size: 25px;
+    left:10%;
+    color:black;
+}
+
+.cont{
+    position: absolute;
+    top:85%;
+    left:10%;
+    color:black;
+}
+
+.logo{
+    position: absolute;
+    top:90%;
+    left:40%;
+}
+
+i{
+    size: 9x;
+    height: 30px;
+    background-color:white;
+    border: 2px  2px 2px 2px;
+    padding:30px; 
+    border-radius: 30px;
+}
+
+.github{
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+    position: absolute;
+    left:130%;
+    top:10%;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.github:hover{
+    background-color: aqua;
+    border-bottom: 2px solid coral;
+    border-right: 2px solid coral;
+    border-left: 2px solid coral;
+    border-top: 2px solid coral;
+    
+}

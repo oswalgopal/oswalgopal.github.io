@@ -19,11 +19,14 @@ a{
 }
 .top{
     background-color:darkorange;
-    border-radius: 50px;        
+    border-radius: 50px;
+    position: fixed;
+    top:0%;
+    padding: 20px 1750px 00px 50px;
 }
 
 .top_h{
-    position: absolute;
+    position: fixed;
     top:2%;
     left:10%;
     font-family: 'Lobster', cursive;
@@ -48,7 +51,7 @@ a{
 }
 
 .a1{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:55%;
     font-size: 35px;
@@ -57,7 +60,7 @@ a{
 }
 
 .a2{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:65%;
     font-size: 35px;
@@ -65,7 +68,7 @@ a{
 }
 
 .a3{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:75%;
     font-size: 35px;
@@ -77,7 +80,7 @@ body{
 }
 
 .a4{
-    position: absolute;
+    position: fixed;
     top:6%;
     left:85%;
     font-size: 35px;
@@ -88,7 +91,7 @@ body{
     width:90px; 
     height:90px;
     border-radius:50px;
-    position: absolute;
+    position: fixed;
     top:2%;
     left:2%;
 }

@@ -55,9 +55,10 @@ body{
     font-size: 40px;
 }
 
-
-    .top{
-        background-color:darkorange;
-        border-radius: 50px;        
-    
+.top{
+    background-color:darkorange;
+    border-radius: 50px;
+    position: fixed;
+    top:0%;
+    padding: 20px 1750px 00px 50px;
 }
