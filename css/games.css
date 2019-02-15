@@ -10,10 +10,29 @@
     background-size:400px; 
     position:absolute;
     top:30%;
-    left:38%;
+    left:15%;
     color:white;
     
 }
+
+.tic-tac-toe{
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding:100px 100px 100px 100px ;
+    border-radius:50px;
+    font-size: 50px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBkBkR2o9GfEPlg_Giki-ICwZrrCGKP1S3-nQDc8YBCrETxhZm");
+    background-size:420px; 
+    position:absolute;
+    top:30%;
+    left:45%;
+    color:lightgreen;
+    
+}
+
+
 a{
     text-decoration: none;
 }
