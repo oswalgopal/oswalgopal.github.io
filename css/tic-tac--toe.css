@@ -63,13 +63,33 @@
 }
 
 
-.back{
+.btn{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: black;
+    margin: 10px;
+    border-radius: 30px;
+    position: relative;
+    padding:  2px 2px 2px  30px ;
+}
+
+
+.btn i{
+    line-height:70px;
+    text-align-last:30%;
+    font-size: 50px;
+    transition: 0.2s linear;
     color:white;
-    font-size:35px;
-    position: fixed;
+}
+
+.btn:hover i{
+    transform: scale(1.3);
+    color:darkviolet; 
+}
+
+.home {
+    position: absolute;
     top:15%;
     left:2%;
-    background-color: darkorchid;
-    padding:5px 5px 5px 5px;
-    border-radius: 50px; 
 }

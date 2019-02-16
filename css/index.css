@@ -1,12 +1,16 @@
 body{
-    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjwfltRZRSPNngkj2pPlSzhUcRy3hIMFsGxF5yPIsvIvl6SMZv') ; 
-    background-size: 2000px;
+    background-image:url('https://images.pexels.com/photos/1187438/pexels-photo-1187438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') ; 
+    background-size: 1830px;
     
 }
 
-.hr{
-    position: fixed;
-
+.quote{
+    position: absolute;
+    top:12%;
+    left:17%;
+    font-family: 'Lobster';
+    color:red;
+    font-size:80px ;
 }
 
 .top_h{
@@ -14,15 +18,15 @@ body{
     top:2%;
     left:10%;
     font-family: 'Lobster', cursive;
-    color:darkblue;
+    color:white;
     font-size: 40px;
 }
 
-h1{
-    position: absolute;
-    top:0%;
-    left:28%;
-    color:white;
+
+.top_h:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+color: chartreuse;
 
 }
 
@@ -34,13 +38,28 @@ h1{
     top:2%;
     left:2%;
 }
+
+.image:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+
 .name{
     position: absolute;
-    top:1%;
-    left:30%;
+    top:60%;
+    left:36%;
+    color: white;
+    font-size: 25px;
 }
+
+.name:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 .top{
-    background-color:darkorange;
+    background-color:darkslategray;
     border-radius: 50px;
     position: fixed;
     top:0%;
@@ -48,21 +67,21 @@ h1{
 }
 p{
 
-    font-size:30px;
+    font-size:30px;    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: springgreen;
+    color: yellow;
 }
 .middle{
     position: absolute;
-    top:40%;
+    top:35%;
     left:35%;
     border-bottom:2px solid black ;
     border-top: 2px solid black;
     border-right: 2px solid black;
     border-left: 2px solid black;
-    padding: 100px 100px 0px 100px ;
+    padding: 60px 100px 0px 100px ;
     border-radius: 50px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfNvzjNcE2TXh5b0VcM0BIwDwMTneS4NIgGK32iZOI_fUbA0F3eQ");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvM6pzXU4MAidHtM4qMMR161ei9Q8BWS3aDwSN0sLeCPCos-pO");
     background-size:500px; 
     }
 
@@ -72,6 +91,7 @@ p{
     left:55%;
     font-size: 35px;
     text-decoration: none;
+    color:white;
 
 }
 
@@ -79,6 +99,7 @@ p{
     position: fixed;
     top:6%;
     left:65%;
+    color:white;
     font-size: 35px;
     text-decoration: none;
 }
@@ -87,6 +108,7 @@ p{
     position: fixed;
     top:6%;
     left:75%;
+    color:white;
     font-size: 35px;
     text-decoration: none;
 }
@@ -95,6 +117,7 @@ p{
 .a4{
     position: fixed;
     top:6%;
+    color:white;
     left:85%;
     font-size: 35px;
     text-decoration: none;    
@@ -102,46 +125,59 @@ p{
 
 .bottom{
     border-top:1px solid black;
-    border-bottom:1px solid black;
     position: absolute;
     bottom:09%;
     color:white;
-
-    padding-left:1820px;
-
 }
 
 .mob{
     position: absolute;
-    top:95%;
-    left:12%;
+    top:110%;
+    left:76%;
     color:black;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.mob:hover{
+    color:darkblue;
     transform: scale(1.3);
-    font-size: 25px;
 }
 
 .mail{
     position: absolute;
-    top:91%;
-    font-size: 25px;
-    left:10%;
+    top:105%;
+    font-size: 35px;
+    left:70%;
     color:black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
 }
+
+.mail:hover{
+    color:darkblue;
+    transform: scale(1.3);
+}       
 
 .cont{
     position: absolute;
-    top:85%;
-    left:10%;
+    top:95%;
+    left:75%;
     color:black;
+    font-weight: bold;
+    font-size: 50px;
 }
-
+.cont:hover{
+    color:darkblue;
+    transform: scale(1.3);
+}
 
 
 .logo{
     position: absolute;
-    top:95%;
-    left:30%;
-    transform: translateY(-50%);
+    top:120%;
+    left:57%;
     width: 100%;
 }
 
@@ -150,10 +186,10 @@ p{
     display: inline-block;
     width: 70px;
     height: 70px;
-    background: #f1f1f1;
+    background: black;
     margin: 10px;
     border-radius: 30px;
-    color:black;
+    color:white;
     position: relative;
     padding:  2px 2px 2px  30px ;
 }
@@ -169,5 +205,34 @@ p{
 
 .btn:hover i{
     transform: scale(1.3);
-    color:darkviolet; 
+    color:cyan; 
+}
+
+.a1:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+.a2:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+.a3:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+
+.a4:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+
+.skills{
+    position: absolute;
+    top:40%;
+    left:80%;
+    color:darkorange;
 }
