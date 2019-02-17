@@ -10,7 +10,7 @@
     background-size:400px; 
     position:absolute;
     top:30%;
-    left:15%;
+    left:05%;
     color:white;
     
 }
@@ -37,7 +37,7 @@ a{
     text-decoration: none;
 }
 .top{
-    background-color:darkorange;
+    background-color:darkturquoise;
     border-radius: 50px;
     position: fixed;
     top:0%;
@@ -49,7 +49,7 @@ a{
     top:2%;
     left:10%;
     font-family: 'Lobster', cursive;
-    color:darkblue;
+    color:red;
     font-size: 40px;
 }
 
@@ -64,8 +64,9 @@ a{
     position: absolute;
     top:15%;
     left:32%;
-    background-color: darkred;
-    color:whitesmoke;
+    background-color:whitesmoke ;
+    color:red;
+    font-family: lobster;
 
 }
 
@@ -94,8 +95,7 @@ a{
     text-decoration: none;
 }
 body{
-    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjwfltRZRSPNngkj2pPlSzhUcRy3hIMFsGxF5yPIsvIvl6SMZv') ; 
-    background-size: 2000px;
+    background-image:url('https://images.pexels.com/photos/262488/pexels-photo-262488.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') ; 
 }
 
 .a4{
@@ -113,5 +113,44 @@ body{
     position: fixed;
     top:2%;
     left:2%;
+}
+
+.a1:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+.a2:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+.a3:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+
+.a4:hover{
+    color:yellow;
+    transform: scale(1.3);
+}
+
+
+.top_h:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    color: yellow;
+
+}
+
+
+.image:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
