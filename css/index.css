@@ -1,5 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+
+
 body{
-    background-image:url('https://images.pexels.com/photos/1187438/pexels-photo-1187438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') ; 
+    background-image:url('https://images.pexels.com/photos/1040499/pexels-photo-1040499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') ; 
     background-size: 1830px;
     
 }
@@ -9,11 +13,13 @@ body{
     top:12%;
     left:17%;
     font-family: 'Lobster';
-    color:red;
+    color:white;
     font-size:80px ;
 }
 
 .top_h{
+    animation:glow_3 10s ease-in-out infinite;  
+
     position: fixed;
     top:2%;
     left:10%;
@@ -22,6 +28,14 @@ body{
     font-size: 40px;
 }
 
+
+ 
+  @keyframes glow_2 {
+    0%,100%{ text-emphasis-color:0 0 30px cyan; }
+    25%{ text-emphasis-color:0 0 30px orange; }
+    50%{ text-emphasis-color:0 0 30px lightgreen; }
+    75%{ text-emphasis-color:0 0 30px lightgoldenrodyellow; }
+  }
 
 .top_h:hover{
     transform: scale(1.2);
@@ -45,13 +59,68 @@ color: chartreuse;
 
 }
 
-.name{
-    position: absolute;
-    top:60%;
-    left:36%;
-    color: white;
-    font-size: 25px;
+
+
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+h2 {
+  animation:glow 10s ease-in-out infinite;  
 }
+
+figure {
+  animation:wobble 5s ease-in-out infinite;
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%,100%{ transform:rotate3d(1,1,0,00deg); }
+  25%{ transform:rotate3d(-1,1,0,00deg); }
+  50%{ transform:rotate3d(-1,-1,0,00deg); }
+  75%{ transform:rotate3d(1,-1,0,00deg); }
+}
+
+h2 {
+  display:block;
+  width:100%;
+  padding:40px;
+  font:400 8em 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  top:80%;
+  left:30%;
+  color:black;
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+h2:nth-child(2){ transform:translateZ(5px); }
+h2:nth-child(3){ transform:translateZ(10px);}
+h2:nth-child(4){ transform:translateZ(15px); }
+h2:nth-child(5){ transform:translateZ(20px); }
+h2:nth-child(6){ transform:translateZ(25px); }
+h2:nth-child(7){ transform:translateZ(30px); }
+h2:nth-child(8){ transform:translateZ(35px); }
+h2:nth-child(9){ transform:translateZ(40px); }
+h2:nth-child(10){ transform:translateZ(45px); }
+
+
+
+.quote {
+    animation:glow_2 10s ease-in-out infinite;  
+  }
+ 
+  @keyframes glow_2 {
+    0%,100%{ text-shadow:0 0 30px cyan; }
+    25%{ text-shadow:0 0 30px orange; }
+    50%{ text-shadow:0 0 30px lightgreen; }
+    75%{ text-shadow:0 0 30px lightgoldenrodyellow; }
+  }  
 
 .name:hover{
     transform: scale(1.2);
@@ -71,19 +140,25 @@ p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: yellow;
 }
-.middle{
+.name{
     position: absolute;
-    top:35%;
-    left:35%;
-    border-bottom:2px solid black ;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    padding: 60px 100px 0px 100px ;
-    border-radius: 50px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvM6pzXU4MAidHtM4qMMR161ei9Q8BWS3aDwSN0sLeCPCos-pO");
-    background-size:500px; 
-    }
+    top:61%;
+    left: 47%;
+}
+.dev{
+    position: absolute;
+    top:65%;
+    left:41%;
+    font-size:36px ;
+}
+
+.image_2{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+}
 
 .a1{
     position: fixed;
@@ -132,9 +207,9 @@ p{
 
 .mob{
     position: absolute;
-    top:110%;
-    left:76%;
-    color:black;
+    top:119%;
+    left:6%;
+    color:lightcyan;
     font-size: 35px;
     font-weight: bold;
 
@@ -147,10 +222,10 @@ p{
 
 .mail{
     position: absolute;
-    top:105%;
+    top:125%;
     font-size: 35px;
-    left:70%;
-    color:black;
+    left:6%;
+    color:lightgray;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
 }
@@ -162,9 +237,9 @@ p{
 
 .cont{
     position: absolute;
-    top:95%;
-    left:75%;
-    color:black;
+    top:110%;
+    left:5%;
+    color:white;
     font-weight: bold;
     font-size: 50px;
 }
@@ -176,8 +251,8 @@ p{
 
 .logo{
     position: absolute;
-    top:120%;
-    left:57%;
+    top:135%;
+    left:5%;
     width: 100%;
 }
 
@@ -186,10 +261,10 @@ p{
     display: inline-block;
     width: 70px;
     height: 70px;
-    background: black;
+    background: white;
     margin: 10px;
     border-radius: 30px;
-    color:white;
+    color:darkcyan;
     position: relative;
     padding:  2px 2px 2px  30px ;
 }
@@ -238,22 +313,23 @@ p{
 .skills{
     position: absolute;
     top:40%;
-    left:80%;
-    color:darkorange;
+    left:10%;
 }
+
 
 .qual{
     font-size: 40px;
     position: absolute;
-    top:63%;
-    left:65%;
+    top:80%;
+    left:35%;
+    color:white;
 }
 
 
 
 .quality{
     position: absolute;
-    top:65%;
+    top:85%;
     left:75%;
     font-size:25px;
     padding-right:50px; 
@@ -262,5 +338,8 @@ p{
 
 .mar{
     font-size:40px;
-    color: red;
+    color:lightcyan;
 }
+
+
+
