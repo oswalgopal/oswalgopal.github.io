@@ -5,6 +5,7 @@
 body{
     background-image:url('https://images.pexels.com/photos/1040499/pexels-photo-1040499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') ; 
     background-size: 1830px;
+    margin: 0%;
     
 }
 
@@ -342,4 +343,61 @@ p{
 }
 
 
+
+
+@media screen and (max-width:1550px ){
+    .a1 , .a2, .a3, .a4  {
+        font-size:100%;
+      }
+      h2{
+          font-size: 450%;  
+      }
+      .qual{
+          font-size: 150%;
+      }
+      .quote{
+          font-size: 250%;
+      }
+      .top_h{
+          font-size:150%;
+      }
+      .image, .image_2{
+          width: 5%;
+          height:5%;
+      }
+
+      body{
+          background-attachment:fixed ; 
+      }
+}
+
+
+
+
+
+@media screen and (max-width:1350px ){
+    .a1 , .a2, .a3, .a4  {
+        font-size:80%;
+      }
+      h2{
+          font-size: 450%;  
+      }
+      .qual{
+          font-size: 150%;
+      }
+      .quote{
+          font-size: 250%;
+      }
+      .top_h{
+          font-size:150%;
+      }
+      .image, .image_2{
+          width: 5%;
+          height:5%;
+      }
+
+      body{
+          background-size:125% ; 
+      }
+}
 
