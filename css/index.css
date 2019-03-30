@@ -30,6 +30,9 @@ h1{
 .about_me{
     margin-top:35px;
 }
+.self_info_p{
+    font-family: 'Annie Use Your Telescope', cursive;
+}
 .about_me div{
     margin-top:40px;
 }
@@ -46,9 +49,17 @@ h3{
     color:white;
 }
 
+.self_info{
+    margin-top:50px;
+    padding: 10px;
+    text-align: justify;    
+}
+
+
+
 
 footer{
-    background-color: black;
+    background-color: rgb(56, 54, 54);
 }
 
 footer p{
