@@ -30,8 +30,17 @@ h1{
 .about_me{
     margin-top:35px;
 }
-.about_me p{
-    margin-top:10px;
+.about_me div{
+    margin-top:40px;
+}
+
+.about_me div p{
+    font-family: 'Merienda', cursive;
+
+}
+
+.about_me h2{
+    font-family: 'Permanent Marker', cursive;
 }
 h3{
     color:white;
