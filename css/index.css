@@ -26,6 +26,7 @@ h1{
     margin: 25px;
     width: 300px;
     height:300px;
+    align-content: center;
 }
 .about_me{
     margin-top:35px;
@@ -56,6 +57,72 @@ h3{
 }
 
 
+.heading{
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Lemon', cursive;
+}
+
+.skill{
+    background-color: rgb(168, 168, 168);
+}
+.html5{
+    width: 90%;
+    background-color: rgb(13, 161, 13);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.css{
+    width: 90%;
+    background-color: rgb(31, 137, 236);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.javascript{
+    width: 90%;
+    background-color: rgb(161, 31, 236);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.bootstrap{
+    width: 90%;
+    background-color: rgb(223, 147, 49);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.typescript{
+    width: 90%;
+    background-color: rgb(214, 54, 54);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.angular{
+    width: 90%;
+    background-color: rgb(40, 43, 40);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.python{
+    width: 90%;
+    background-color: rgb(241, 171, 206);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+
+
+        
+            /* footer */
 
 
 footer{
@@ -66,4 +133,5 @@ footer p{
     color:white;
     margin-left:50px;
 }
+
 
