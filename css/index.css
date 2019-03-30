@@ -22,6 +22,17 @@ h1{
     background-color: rgb(211, 205, 205);
 }
 
+.mine{
+    margin: 25px;
+    width: 300px;
+    height:300px;
+}
+.about_me{
+    margin-top:35px;
+}
+.about_me p{
+    margin-top:10px;
+}
 h3{
     color:white;
 }
@@ -33,4 +44,6 @@ footer{
 
 footer p{
     color:white;
+    margin-left:50px;
 }
+
