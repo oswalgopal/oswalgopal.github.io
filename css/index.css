@@ -23,9 +23,9 @@ h1{
 }
 
 .mine{
-    margin: 25px;
-    width: 300px;
-    height:300px;
+    margin: 55px 25px 25px 25px;
+    width: 250px;
+    height:250px;
     align-content: center;
 }
 .about_me{
@@ -59,10 +59,16 @@ h3{
 
 .heading{
     margin-top: 50px;
-    text-align: center;
     font-family: 'Lemon', cursive;
 }
 
+.star{
+    margin-top:5px;
+    color:gold;
+}
+.star2{
+    color:rgb(179, 176, 176);
+}
 .skill{
     background-color: rgb(168, 168, 168);
 }
@@ -131,7 +137,7 @@ footer{
 
 footer p{
     color:white;
-    margin-left:50px;
+
 }
 
 
