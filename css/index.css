@@ -132,15 +132,14 @@ h3{
 
 
 footer{
-    background-color: rgb(56, 54, 54);
-    margin-bottom:0px;
-    padding: 35px 0px 35px 0px;
+    background-color: #383636;
 }
 
 ul{
     list-style-type: none;
 }
 footer h4{
+    margin:5px;
     color:white;
 } 
 
@@ -150,8 +149,14 @@ footer h4{
     font-size: 25px;
 }
 
-footer p:hover{
+.logos:hover{
     cursor: pointer;
+    color: aquamarine;
+}
+
+.copyright{
+    color: aliceblue;
+    text-align: center;
 }
 
 
