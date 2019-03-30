@@ -133,11 +133,25 @@ h3{
 
 footer{
     background-color: rgb(56, 54, 54);
+    margin-bottom:0px;
+    padding: 35px 0px 35px 0px;
 }
 
-footer p{
+ul{
+    list-style-type: none;
+}
+footer h4{
     color:white;
+} 
 
+.logos{
+    margin-left: 15px;
+    color:white;
+    font-size: 25px;
+}
+
+footer p:hover{
+    cursor: pointer;
 }
 
 
