@@ -122,11 +122,6 @@ h3{
     font-weight: bold;
 }
 
-
-
-
-
-
         
             /* footer */
 
@@ -142,6 +137,10 @@ footer h4{
     margin:5px;
     color:white;
 } 
+
+.contact_logo li{
+    display: inline;
+}
 
 .logos{
     margin-left: 15px;
