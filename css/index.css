@@ -3,7 +3,8 @@ body{
     padding: 0%;
 }
 nav{
-    background-color: aqua;
+    background-color: white;
+    border-bottom:1px black solid;
     color: black;
 }
 .name{
@@ -50,6 +51,19 @@ h3{
     color:white;
 }
 
+.education{
+    margin-top:10%;
+}
+
+.edu{
+    text-align: center;
+}
+
+.edu2{
+    text-align: center;
+    margin-top:5%;
+}
+
 .self_info{
     margin-top:50px;
     padding: 10px;
@@ -69,54 +83,73 @@ h3{
 .star2{
     color:rgb(179, 176, 176);
 }
-.skill{
-    background-color: rgb(168, 168, 168);
-}
+
 .html5{
+    background-color: rgb(83, 80, 80);
     width: 95%;
-    background-color: rgb(13, 161, 13);
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
     text-align: center;
     color: black;
     font-weight: bold;
 }
 .css{
+    background-color: rgb(83, 80, 80);
     width: 90%;
-    background-color: rgb(31, 137, 236);
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
     text-align: center;
     color: black;
     font-weight: bold;
 }
 .javascript{
+    background-color: rgb(83, 80, 80);
     width: 80%;
-    background-color: rgb(161, 31, 236);
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
     text-align: center;
     color: black;
     font-weight: bold;
 }
 .bootstrap{
-    width: 90%;
-    background-color: rgb(223, 147, 49);
+    background-color: rgb(83, 80, 80);
+    width: 90%;    
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
     text-align: center;
     color: black;
     font-weight: bold;
 }
 .typescript{
+    background-color: rgb(83, 80, 80);
     width: 75%;
-    background-color: rgb(214, 54, 54);
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
     text-align: center;
     color: black;
     font-weight: bold;
 }
 .angular{
-    width: 60%;
-    background-color: rgb(40, 43, 40);
+    background-color: rgb(83, 80, 80);
+    width: 60%;   
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
     text-align: center;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 .python{
     width: 70%;
-    background-color: rgb(241, 171, 206);
+    height: 15px;
+    font-size: 0%;
+    border-radius: 50px;
+    background-color: rgb(83, 80, 80);
     text-align: center;
     color: black;
     font-weight: bold;
