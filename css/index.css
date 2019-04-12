@@ -101,75 +101,39 @@ h3{
     color:rgb(179, 176, 176);
 }
 
-.html5{
+.skill{
+    font-size: 0%;
+    text-align: center;
+
+}
+
+.subject{
+    height: 15px;
+    border-radius: 50px;
     background-color: rgb(83, 80, 80);
+
+}
+
+ [data-value="95"]{
     width: 95%;
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.css{
-    background-color: rgb(83, 80, 80);
+[data-value="90"]{
     width: 90%;
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.javascript{
-    background-color: rgb(83, 80, 80);
+[data-value="80"]{
     width: 80%;
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.bootstrap{
-    background-color: rgb(83, 80, 80);
+[data-value="90"]{
     width: 90%;    
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.typescript{
-    background-color: rgb(83, 80, 80);
+[data-value="75"]{
     width: 75%;
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.angular{
-    background-color: rgb(83, 80, 80);
+[data-value="60"]{
     width: 60%;   
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.python{
+[data-value="70"]{
     width: 70%;
-    height: 15px;
-    font-size: 0%;
-    border-radius: 50px;
-    background-color: rgb(83, 80, 80);
-    text-align: center;
-    color: black;
-    font-weight: bold;
 }
 
         
