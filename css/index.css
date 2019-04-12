@@ -57,12 +57,29 @@ h3{
 
 .edu{
     text-align: center;
+    border-right: 2px solid black;
 }
 
-.edu2{
+.edu3{
     text-align: center;
-    margin-top:5%;
 }
+.line{
+    display: none;
+}
+
+@media screen and (max-width:770px){
+    .edu{
+        text-align: center;
+        border-right: none;
+    }   
+    .line{
+        display: inline;
+        width: 250px;
+        border:2px solid black;
+    }
+}
+
+
 
 .self_info{
     margin-top:50px;
