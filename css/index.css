@@ -11,6 +11,14 @@ nav{
     font-family: 'Lobster', cursive;
 }
 
+._btn{
+    position: sticky;
+    top:96%;
+    float:right;
+    background-color:orange; 
+    border:2px solid black;
+}
+
 
 h1{
     font-family: 'Baloo Chettan', cursive;
