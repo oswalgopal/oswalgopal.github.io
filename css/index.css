@@ -2,113 +2,310 @@ body{
     margin: 0%;
     padding: 0%;
 }
-nav{
-    background-color: white;
-    border-bottom:1px black solid;
-    color: black;
-}
-.name{
-    font-family: 'Lobster', cursive;
+
+.wrap{
+    display: flex;
+    justify-content: flex-end;
 }
 
-._btn{
-    position: sticky;
-    top:96%;
-    float:right;
-    background-color:orange; 
-    border:2px solid black;
-}
-
-
-h1{
-    font-family: 'Baloo Chettan', cursive;
-    font-size: 50px;
+.left{
     text-align: center;
-    margin-top: 2%;
+    width: 50%;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: 0.3s;
 }
 
-.about{
-    background-color: rgb(211, 205, 205);
-}
-
-.mine{
-    margin: 55px 25px 25px 25px;
-    width: 250px;
-    height:250px;
-    align-content: center;
-}
-.about_me{
-    margin-top:35px;
-}
-.self_info_p{
-    font-family: 'Annie Use Your Telescope', cursive;
-}
-.about_me div{
-    margin-top:40px;
-}
-
-.about_me div p{
-    font-family: 'Merienda', cursive;
-
-}
-
-.about_me h2{
-    font-family: 'Permanent Marker', cursive;
-}
-h3{
-    color:white;
-}
-
-.education{
-    margin-top:10%;
-}
-
-.edu{
+.right{
     text-align: center;
-    border-right: 2px solid black;
+    width: 50%;
+    float: right;
+    transition-property: width;
+    transition-duration: 2s;
 }
 
-.edu3{
-    text-align: center;
-}
-.line{
-    display: none;
+.left:hover{
+    width:80%;
 }
 
-@media screen and (max-width:770px){
-    .edu{
-        text-align: center;
-        border-right: none;
-    }   
-    .line{
-        display: inline;
-        width: 250px;
-        border:2px solid black;
+.right:hover{
+    width:80%;
+}
+
+@media screen and (max-width:500px){
+    .wrap{
+        display: unset;
+    }
+    .right{
+        width: 100%;
+        float: unset;
+        /* background-color: aqua; */
+        transition: unset;
+        transition-property: unset;
+        transition-duration: unset;
+    }
+    .left{
+        width: 100%;
+        transition: unset;
+        transition-property: unset;
+        transition-duration: unset;
+    }
+    .left:hover{
+        width: unset;
+    }
+    .right:hover{
+        width: unset;
     }
 }
 
 
+.social-button{
+    list-style-type: none;
+    display: none;
+    justify-content: center;
+    margin-top:20px; 
+}
 
-.self_info{
-    margin-top:50px;
-    padding: 10px;
-    text-align: justify;    
+.logo{
+    font-size: 35px;
+    background-color: gray;
+    border-radius: 100%;
+    color: black;
+    padding: 15%;
+    transform: scale(1);
+    transition-property:scale();
+    transition-duration: 1s;
+}
+.logo:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+/* 
+@media screen and (max-width:1000px){
+    .social-button{
+        display: flex;
+        justify-content: center;
+        margin-left:0px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .social-button{
+        display: inline-flex;
+        /* justify-content: flex-start; */
+        /* float: left;
+        margin-left:15%;
+    }
+}
+
+@media screen and (max-width:330px){
+    .social-button{
+    margin-left: 5%;
+    }
+} */
+
+.left-wrap{
+    margin: 0%;
+    padding: 0%;
+    background-image: url('https://i2.wp.com/textureshot.com/wp-content/uploads/2018/11/20-Seamless-Black-Wood-Background-Textures-on-Behance.jpg?fit=1024%2C681&ssl=1');
+    background-size: cover;
+    background-position: center;
+    border:25px double white;
+    text-align: center;  
+    position: sticky;
+    top: 0%;
+    left: 0%; 
+    animation-name: disp;
+    animation-duration: 5s;
+}
+
+@keyframes disp{
+    0%{
+        display: none;
+    }
+    100%{
+        display: unset;
+    }
 }
 
 
-.heading{
-    margin-top: 50px;
-    font-family: 'Lemon', cursive;
+.head{
+    text-align: center;
+    color: white;
+    font-style: italic; 
+    font-weight: bold;
+    padding-top: 25px;
+    /* animation-name: move; */
+    /* animation-duration: 2s; */
+    /* animation-iteration-count: 1; */
+}
+
+/* @keyframes move{
+    0%{
+        position: absolute;
+        top: -10%;
+    }
+    100%{
+        position: unset;
+        top: 0%;
+    }
+} */
+
+
+
+.my-image{
+    width:  250px;
+    height: 250px;
+    border-radius: 100%;
+    filter:grayscale(50%);
+    margin-top: 15px;
+    /* animation-name: img-move; */
+    /* animation-duration: 2s; */
+}
+
+/* @keyframes img-move{
+    0%{
+        position: absolute;
+        top: -100px;
+    }
+    100%{
+        position: unset;
+        top: 0%;
+    }
+} */
+
+.my-image:hover{
+    filter:grayscale(0%);
+    cursor: pointer;
+
+}
+.name{
+    color: white;
+    font-weight: bolder;    
+    font-family: 'Times New Roman', Times, serif;
+    filter: grayscale(1.5);
+}
+
+.designation{
+    color: white;
+    font-style: oblique;
+}
+
+.other{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.intro{
+    color: white;
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 25px;
+}
+.social-button{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top:20px; 
+}
+
+.logo{
+    font-size: 35px;
+    background-color: white;
+    border-radius: 100%;
+    color: black;
+    padding: 15%;
+    transform: scale(1);
+    transition-property:scale();
+    transition-duration: 1s;
+}
+.logo:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+@media screen and (max-width:1350px){
+    .logo{
+        font-size: 30px;
+        padding: 10%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .logo{
+        font-size: 20px;
+        padding: 5%;
+    }
+    .social-button{
+        display: flex;
+        justify-content: left;  
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    .social-button{
+        display: none;
+    }
+}
+
+/* .container{ */
+    /* background-image: url('https://images.wallpaperscraft.com/image/wooden_background_light_texture_50369_300x168.jpg'); */
+/* } */
+
+
+.experience{
+    margin-top: 8px;
+    border:25px double black;
+    /* background-image: url('../../assets/background.jpg'); */
+    /* background-position: center; */
+    /* background-image: url('https://i1.wp.com/textureshot.com/wp-content/uploads/2018/11/Concrete-bare-rough-wall-texture-seamless-01580.jpg?fit=1000%2C1000&ssl=1'); */
+    /* background-image: url('https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); */
+}
+
+.job-1{
+    transform: scale(1);
+}
+
+
+
+.projects{
+    border:25px double black;
+    margin-top: 25px;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIKH1-_rbXUVT2X-OU_pZ9EXYl_fv2eDdaSYEEP2rrSFmwAV9K'); */
+}
+
+.caro{
+    margin-left:25px;
+    margin-right: 25px; 
+}
+
+@media screen and (max-width:1000px){
+    .caro{
+        margin-left:unset;
+        margin-right: unset;
+    }
+}
+
+.skills{
+    border:25px double black;
 }
 
 .star{
-    margin-top:5px;
-    color:gold;
-}
-.star2{
-    color:rgb(179, 176, 176);
+    color: orange;
+    font-size: 25px;
 }
 
+.star-5{
+    color:rgb(196, 190, 190);
+    font-size: 25px;
+
+}
 .skill{
     font-size: 0%;
     text-align: center;
@@ -119,7 +316,8 @@ h3{
     height: 15px;
     border-radius: 50px;
     background-color: rgb(83, 80, 80);
-
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
  [data-value="95"]{
@@ -144,40 +342,62 @@ h3{
     width: 70%;
 }
 
-        
-            /* footer */
-
-
-footer{
-    background-color: #383636;
+.education{
+    border:25px double black;
+    /* background-image: url('https://images.wallpaperscraft.com/image/wooden_bumps_texture_133287_300x168.jpg'); */
+    /* background-image: url('http://emoticonswallpapers.com/background/pattern/background-pattern-006.gif'); */
+    /* background-color: rgb(in187, 186, 186); */
+    margin-top: 25px;
 }
 
-ul{
-    list-style-type: none;
-}
-footer h4{
-    margin:5px;
-    color:white;
-} 
 
-.contact_logo li{
-    display: inline;
+.edu-header{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;
 }
 
-.logos{
-    margin-left: 10px;
-    color:white;
-    font-size: 25px;
-}
-
-.logos:hover{
-    cursor: pointer;
-    color: aquamarine;
-}
-
-.copyright{
-    color: aliceblue;
+.edu-cl{
+    margin-top:10px;
+    border-right: 2px solid black;
     text-align: center;
 }
+.edu-cl-1{
+    margin-top:10px;
+    text-align: center;
+
+}
+
+.edu-cl h2 , .edu-cl-1 h2{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.edu-cl h4 , .edu-cl-1 h4{
+    font-weight: 100;
+}
+.edu-cl h5 , .edu-cl-1 h5{
+    font-weight: bolder;
+}
+
+
+
+.line{
+    display: none;
+}
+
+@media screen and (max-width:993px){
+    .edu-cl{
+        border-right: none;
+    }
+    .line{
+        width: 50%;
+        display: unset;
+        border:1px solid orange;
+    }
+}
+
+
+
+
 
 
