@@ -207,9 +207,27 @@ body{
 }
 .social-button{
     list-style-type: none;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     margin-top:20px; 
+}
+
+.social-button-1{
+    list-style-type: none;
+    display: none;
+    margin-top:20px; 
+}
+
+.prj-btn{
+    background-color: rgb(173, 172, 172);
+    color: black;
+    transition-property: transform;
+    transition-duration: .5s;
+    transform: scale(1.0);
+}
+.prj-btn:hover{
+    background-color: rgb(53, 53, 52);
+    color: white;
+    transform: scale(1.2);
 }
 
 .logo{
@@ -251,6 +269,9 @@ body{
 @media screen and (max-width:1000px){
     .social-button{
         display: none;
+    }
+    .social-button-1{
+        display: flex;
     }
 }
 
