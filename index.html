@@ -22,9 +22,40 @@
   <link rel="shortand icon" href="images/pp.jpeg" type="image">
 </head>
 
+<style>
+
+  .logos{
+    position: absolute;
+    left: -60px;
+    top: 30px;  
+    padding: 25px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    z-index: 15;
+    transition: 0.3s;  
+  }
+
+  .logos a {
+    width:150px;
+    height: 50px;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 35px;
+    background-color: cyan;
+  }
+  .logos a:hover{
+    position: absolute;
+    top:30px;
+    left: 0px;
+  }
+</style>
 
 <body>
 
+  <!-- <div class="logos">
+    <a href="">Home</a> <br>
+  </div> -->
   <div class="conainter-fluid wrap">
     <div class="left">
       <div class="container left-wrap">
@@ -88,7 +119,7 @@
 
         <!-- ================================== EXPERIENCE ENDED ================================= -->
 
-
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fas fa-arrow-up"></i> </button>
 
         <!-- ===================================== PROJECT STARTED ================================== -->
 
@@ -359,6 +390,23 @@
 
     </div>
   </div>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
