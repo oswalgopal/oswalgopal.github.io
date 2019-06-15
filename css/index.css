@@ -56,6 +56,9 @@ body{
     .right:hover{
         width: unset;
     }
+    .logo-wrapper{
+        display: none;
+    }
 }
 
 
@@ -65,46 +68,6 @@ body{
     justify-content: center;
     margin-top:20px; 
 }
-
-.logo{
-    font-size: 35px;
-    background-color: gray;
-    border-radius: 100%;
-    color: black;
-    padding: 15%;
-    transform: scale(1);
-    transition-property:scale();
-    transition-duration: 1s;
-}
-.logo:hover{
-    transform: scale(1.5);
-    cursor: pointer;
-    color: white;
-    background-color: black;
-}
-/* 
-@media screen and (max-width:1000px){
-    .social-button{
-        display: flex;
-        justify-content: center;
-        margin-left:0px;
-    }
-}
-
-@media screen and (max-width:400px){
-    .social-button{
-        display: inline-flex;
-        /* justify-content: flex-start; */
-        /* float: left;
-        margin-left:15%;
-    }
-}
-
-@media screen and (max-width:330px){
-    .social-button{
-    margin-left: 5%;
-    }
-} */
 
 .left-wrap{
     margin: 0%;
@@ -230,55 +193,6 @@ body{
     transform: scale(1.2);
 }
 
-.logo{
-    font-size: 35px;
-    background-color: white;
-    border-radius: 100%;
-    color: black;
-    padding: 15%;
-    transform: scale(1);
-    transition-property:scale();
-    transition-duration: 1s;
-}
-.logo:hover{
-    transform: scale(1.5);
-    cursor: pointer;
-    color: white;
-    background-color: black;
-}
-
-@media screen and (max-width:1350px){
-    .logo{
-        font-size: 30px;
-        padding: 10%;
-    }
-}
-
-@media screen and (max-width:900px){
-    .logo{
-        font-size: 20px;
-        padding: 5%;
-    }
-    .social-button{
-        display: flex;
-        justify-content: left;  
-    }
-}
-
-
-@media screen and (max-width:1000px){
-    .social-button{
-        display: none;
-    }
-    .social-button-1{
-        display: flex;
-    }
-}
-
-/* .container{ */
-    /* background-image: url('https://images.wallpaperscraft.com/image/wooden_background_light_texture_50369_300x168.jpg'); */
-/* } */
-
 
 .experience{
     margin-top: 8px;
@@ -365,9 +279,6 @@ body{
 
 .education{
     border:25px double black;
-    /* background-image: url('https://images.wallpaperscraft.com/image/wooden_bumps_texture_133287_300x168.jpg'); */
-    /* background-image: url('http://emoticonswallpapers.com/background/pattern/background-pattern-006.gif'); */
-    /* background-color: rgb(in187, 186, 186); */
     margin-top: 25px;
 }
 
@@ -432,6 +343,24 @@ body{
     padding: 15px;
     border-radius: 4px;
   }
-  
+.logo-wrapper{
+
+}
+
+.logo{
+    font-size: 25px;
+    margin: 15px;
+    padding: 15%;
+    color: black;
+    background-color: white;
+    border-radius: 100%;
+}
+@media screen and (max-width:800px){
+    .logo{
+        margin: 5px;
+    }
+}
+
+
 
 
