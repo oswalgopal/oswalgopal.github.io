@@ -27,6 +27,8 @@ const handleInput  = command => {
             handleHelp();
         } else if (command === 'about'){
             showAbout();
+        } else if (command === 'cv'){
+            downloadResume();
         } else if (command === 'work'){
             showWork();
         } else if (command === 'projects'){
@@ -66,8 +68,11 @@ const showAbout = () => {
 }
 
 const showSkills = () => {
-    myTerminal.print('I am self learner coder.');
-    myTerminal.print('below is my skillset :');
+    myTerminal.print('> Skills are the unified force of `experience`,');
+    myTerminal.print('> `intellect` and `passion` in their work');
+    myTerminal.print('--------------------------------------------------------');
+    myTerminal.print('******************** MY SKILLS **********************');
+    myTerminal.print('--------------------------------------------------------');
     const skills = [
         {name: "React"},
         {name: "React Native"},
@@ -78,7 +83,7 @@ const showSkills = () => {
         {name: 'Mongodb'},
         {name: "FLask"},
         {name: "Django"},
-        {name: "posgresql"},
+        {name: "Posgresql"},
         {name: "Mysql"},
         {name: "Firebase"},
         {name: "AWS "},
@@ -87,6 +92,7 @@ const showSkills = () => {
     skills.forEach((element) => {
         myTerminal.print(` > ${element.name}`);
     });
+    myTerminal.print('========================================================');
 }
 
 const showContact = () => {
@@ -95,11 +101,10 @@ const showContact = () => {
     myTerminal.print('> gploswal@gmail.com');
     myTerminal.print('> https://github.com/oswalgopal');
     myTerminal.print('> https://linkedin.com/in/oswalgopal');
-    myTerminal.input('Want to the Contact form [y/n]', confirm => {
+    myTerminal.input('Want to the fill Contact form [y/n]', confirm => {
         handleContactForm(confirm);
     })
 }
-
 
 const handleContactForm = confirm => {
     if (confirm.toLowerCase() === 'y') {
@@ -118,6 +123,8 @@ const handleContactForm = confirm => {
             });
         });
     } else if (confirm.toLowerCase() === 'n') {
+        myTerminal.print('ohk cool no worries you can fill it later :)');
+        myTerminal.print('--------------------------------------------------------');
         myTerminal.input('', command2 => {
             handleInput(command2);
         });
@@ -139,6 +146,8 @@ const handleHelp = () => {
         {name: 'achievements'},
         {name: 'projects'},
         {name: 'contact'},
+        {name: 'CV'},
+        {name: 'man'},
         {name: 'clear'},
         {name: 'help'},
         {name: 'exit'},
@@ -150,19 +159,81 @@ const handleHelp = () => {
 
 const handleError = (command) => {
     myTerminal.print('`' + command + '` is not recognised as a valid command ');
-    myTerminal.print('use help to know more about commands');
+    myTerminal.print('use `help` to know more about commands');
 }
 
 const showWork = () => {
-    myTerminal.print('Sorry for inconvenience :(');
-    myTerminal.print('We are under Development right now');
-    myTerminal.print('This sections will be updated soon');
+    const workExp = [
+        {
+            name : 'Maven Software and Research, Indore',
+            time: 'Mar 2019 - May 2019',
+            post: 'Frontend Developer, Intern',
+            work: 'At Maven I learned Angular with which I created some of projects like builder designs etc etc'
+        },
+        {
+            name : 'Kritin Digital Solutions Pvt ltd, Indore',
+            time: 'May 2019 - Nov 2020',
+            post: 'Frontend Developer, Intern',
+            work: 'At Kritin I learned Ionic, Reactjs, React native etc etc. I created many projects like Ulike Mobile, Ravi K das, OPM , Pai Pai etc etc'
+        },
+        {
+            name : 'Kritin Digital Solutions Pvt ltd, Indore',
+            time: 'Nov 2019 - Feb 2020',
+            post: 'Frontend Developer',
+            work: 'Here I worked on Angular, Ionic, React React Native , Posgresql. I create KDERP and also database for Komal Bricks'
+        },
+        {
+            name : 'Protonshub  Technology, Indore',
+            time: 'Mar 2019 - Present',
+            post: 'Full Stack Web-Developer',
+            work: 'Here I am working on all skills mentioned in my skills section.'
+        },
+    ]
+    myTerminal.print('> Dreams won\'t work,');
+    myTerminal.print('> unless you work');
+    myTerminal.print('--------------------------------------------------------');
+    myTerminal.print('******************** MY WORK **********************');
+    myTerminal.print('--------------------------------------------------------');
+    for (let i = 0 ; i < workExp.length; i++) {
+        myTerminal.print(`> ${workExp[i].post}`);
+        myTerminal.print(`> ${workExp[i].name}`);
+        myTerminal.print(`> ${workExp[i].time}`);
+        myTerminal.print(`> ${workExp[i].work}`);
+        myTerminal.print('========================================================');
+    }
 }
 
 const showEducation = () => {
-    myTerminal.print('Sorry for inconvenience :(');
-    myTerminal.print('We are under Development right now');
-    myTerminal.print('This sections will be updated soon');
+    const education = [
+        {
+            name: 'Btech + Mtech (5yr)',
+            cgpa: '8.0 CGPA',
+            school: 'IIPS DAVV Indore',
+            year: '2018-23'
+        },
+        {
+            name: '12th',
+            cgpa: '91 %',
+            school: 'G.P.S. Khargone',
+            year: '2017-18'
+        },
+        {
+            name: '10th',
+            cgpa: '9.4 CGPA',
+            school: 'G.P.S. Khargone',
+            year: '2015-16'
+        },
+    ];
+    myTerminal.print('> Education is not learning of facts,');
+    myTerminal.print('> but the training of the mind to thing');
+    myTerminal.print('--------------------------------------------------------');
+    myTerminal.print('******************** MY EDUCATION **********************');
+    myTerminal.print('--------------------------------------------------------');
+    for (let i = 0 ; i < education.length; i++) {
+        myTerminal.print(`> ${education[i].name}   ( ${education[i].year} )`);
+        myTerminal.print(`> ${education[i].school}  ( ${education[i].cgpa} )`);
+        myTerminal.print('========================================================');
+    }
 }
 const showProject = () => {
     myTerminal.print('Sorry for inconvenience :(');
@@ -174,4 +245,8 @@ const showAchievements = () => {
     myTerminal.print('Sorry for inconvenience :(');
     myTerminal.print('We are under Development right now');
     myTerminal.print('This sections will be updated soon');
+}
+
+const downloadResume = () => {
+    window.open('https://drive.google.com/file/d/1riFXkwagAU0fWg8jjp_WqWTzCFdtTzrm/view?usp=sharing');
 }
