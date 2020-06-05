@@ -19,6 +19,7 @@ myTerminal.print('Enter `help` to list the available commands');
 myTerminal.input('', command => {
         handleInput(command)
 });
+
 const handleInput  = command => {
     if (command.length) {
         command = command.toLowerCase();
