@@ -27,6 +27,8 @@ const handleInput  = command => {
             handleHelp();
         } else if (command === 'about'){
             showAbout();
+        } else if (command === 'git checkout github'){
+            window.open('https://github.com/oswalgopal');
         } else if (command === 'cv'){
             downloadResume();
         } else if (command === 'work'){
@@ -147,6 +149,7 @@ const handleHelp = () => {
         {name: 'projects'},
         {name: 'contact'},
         {name: 'CV'},
+        {name: 'git checkout github'},
         {name: 'man'},
         {name: 'clear'},
         {name: 'help'},
