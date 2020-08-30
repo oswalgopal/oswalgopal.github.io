@@ -23,12 +23,15 @@ myTerminal.input('', command => {
 const handleInput  = command => {
     if (command.length) {
         command = command.toLowerCase();
-        if (command === 'help' || command === 'ls'|| command === 'man') {
+        if (command === 'man') {
+        } else if (command === 'help' || command === 'ls') {
             handleHelp();
         } else if (command === 'about'){
             showAbout();
         } else if (command === 'git checkout github'){
             window.open('https://github.com/oswalgopal');
+        } else if (command === 'docs'){
+            handleDocs();
         } else if (command === 'cv'){
             downloadResume();
         } else if (command === 'work'){
@@ -53,7 +56,7 @@ const handleInput  = command => {
     } else {
         myTerminal.beep();
     }
-    if (command !== 'exit' && command !== 'contact') {
+    if (command !== 'exit' && command !== 'contact' && command !== 'docs') {
         myTerminal.input('', command2 => {
             handleInput(command2);
         });
@@ -245,11 +248,60 @@ const showProject = () => {
 }
 
 const showAchievements = () => {
-    myTerminal.print('Sorry for inconvenience :(');
-    myTerminal.print('We are under Development right now');
-    myTerminal.print('This sections will be updated soon');
+    const achievements = [
+        {
+            name: 'Winner In Invento Hackathon Held at IET DAVV.',
+            about: 'Winner In Invento Hackathon Held at IET DAVV. We created a image proccessing tool which convert low light image into\n' +
+                'high light image. I worked on frontend part of the project.'
+        },
+        {
+            name: 'Winner at Be A Coder',
+            about: 'It\'s 4hr Hackathon organized by Graffesid which had challenges on\n' +
+                'reactjs. The challenge was actually a web app with a dummy JSON.'
+        },
+    ];
+    myTerminal.print('> Motivation is very important for doing any thing,');
+    myTerminal.print('> And Achievements are the best motivation');
+    myTerminal.print('-----------------------------------------------------------');
+    myTerminal.print('******************** MY ACHIEVEMENTS **********************');
+    myTerminal.print('-----------------------------------------------------------');
+    for (let i = 0 ; i < achievements.length; i++) {
+        myTerminal.print(`> ${achievements[i].name} `);
+        myTerminal.print(`> ${achievements[i].about}`);
+        myTerminal.print('===========================================================');
+    }
+    // myTerminal.print('Sorry for inconvenience :(');
+    // myTerminal.print('We are under Development right now');
+    // myTerminal.print('This sections will be updated soon');
 }
 
 const downloadResume = () => {
     window.open('https://drive.google.com/file/d/1riFXkwagAU0fWg8jjp_WqWTzCFdtTzrm/view?usp=sharing');
 }
+
+const handleDocs = command => {
+    myTerminal.input('type `name` whose docs you need ', command2 => {
+        if (command2 === 'mongodb') {
+            window.open('https://docs.google.com/document/d/1iyRGo114UPup8wZp9fEy6l4uN7N0CxW1ceidS7An47Q/edit?usp=sharing');
+            myTerminal.print('hey Thanks. Hope you get to learn something good :)');
+            myTerminal.print('--------------------------------------------------------');
+            myTerminal.input('', command2 => {
+                handleInput(command2);
+            });
+        } else if (command2 === 'git') {
+            window.open('https://docs.google.com/document/d/1ZgJuzy3BMt3qv_0NJoCIeoCXCxV03dKs2Hgcq5fAWQs/edit?usp=sharing')
+            myTerminal.print('hey Thanks. Hope you get to learn something good :)');
+            myTerminal.print('--------------------------------------------------------');
+            myTerminal.input('', command2 => {
+                handleInput(command2);
+            });
+        } else {
+            myTerminal.print('Oops Wrong choice of the docs');
+            myTerminal.print('type `man docs` to know more');
+            myTerminal.input('', command2 => {
+                handleInput(command2);
+            });
+        }
+    })
+}
+
