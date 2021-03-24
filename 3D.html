@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopal Oswal</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #blocker {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+		}
+        #ModeButton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1000;   
+        }
+
+		#instructions {
+			width: 100%;
+			height: 100%;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+
+			-webkit-box-orient: horizontal;
+			-moz-box-orient: horizontal;
+			box-orient: horizontal;
+
+			-webkit-box-pack: center;
+			-moz-box-pack: center;
+			box-pack: center;
+
+			-webkit-box-align: center;
+			-moz-box-align: center;
+			box-align: center;
+
+			color: #ffffff;
+			text-align: center;
+			font-family: Arial;
+			font-size: 14px;
+			line-height: 24px;
+
+			cursor: pointer;
+		}
+    </style>
+</head>
+<body>
+    <!-- <button click="changeMode(scene)" id="ModeButton">Night Mode</button> -->
+    <div id="blocker">
+		<div id="instructions">
+			<span style="font-size:36px; font-weight: bold;">Click to play</span>
+			<br /><br />
+			Move: WASD or Arrow<br/>
+			Jump: SPACE<br/>
+			Look: MOUSE
+		</div>
+	</div>
+    <script src="js/three.min.js"></script>
+    <script src="js/PointerLockControls.js"></script>
+    <!-- <script src="js/jsm/helpers/RectAreaLightHelper.js"></script> -->
+    <!-- <script src="js/jsm/lights/RectAreaLightUniformsLib.js"></script> -->
+    <script src="js/custom/Banner.js"></script>
+    <script src="js/custom/showFloor.js"></script>
+    <script src="js/custom/MainGate.js"></script>
+    <script src="js/custom/ShowMainRoad.js"></script>
+    <script src="js/custom/showSquare.js"></script>
+    <script src="js/custom/boundryWall.js"></script>
+    <script src="js/custom/showSkills.js"></script>
+    <script src="js/custom/sound.js"></script>
+    <script src="js/custom/showProjects.js"></script>
+    <script src="js/custom/showAbout.js"></script>
+    
+    <script>
+        const objects = [];
+        let raycaster;
+        let moveForward = false;
+        let moveBackward = false;
+		let moveLeft = false;
+		let moveRight = false;
+		let canJump = false;
+        raycaster = new THREE.Raycaster( new THREE.Vector3(), new THREE.Vector3( 0, - 1, 0 ), 0, 10 );
+        let prevTime = performance.now();
+		const velocity = new THREE.Vector3();
+		const direction = new THREE.Vector3();
+		const vertex = new THREE.Vector3();
+		const color = new THREE.Color();
+        // creating a screne
+        var scene = new THREE.Scene();
+        // scene.background = new THREE.Color( 0x0000000 );
+        scene.background = new THREE.Color( 0xbcfbf7 );
+        // creating a camera for view
+        // fov — Camera frustum vertical field of view.
+        // aspect — Camera frustum aspect ratio.
+        // near — Camera frustum near plane.
+        // far — Camera frustum far plane.
+        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 5000);
+        camera.position.y = 40;
+        camera.position.x = 0;
+        camera.position.z = 0;        
+        // creating a renderer 
+        var renderer = new THREE.WebGLRenderer(); 
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        // handling change in screen size 
+        window.addEventListener('resize', function(){
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            renderer.setSize(width, height);
+            // to keep the aspect ratior of camera
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix(); 
+        });
+
+        // added controls
+        var controls =  new THREE.PointerLockControls( camera, document.body );
+        controls.getObject().position.y = 50; // for high camera
+        const blocker = document.getElementById( 'blocker' );
+		const instructions = document.getElementById( 'instructions' );
+
+        instructions.addEventListener( 'click', function () {
+			controls.lock();
+		} );
+
+		controls.addEventListener( 'lock', function () {
+			instructions.style.display = 'none';
+			blocker.style.display = 'none';
+            playSound(camera, controls);
+		} );
+
+		controls.addEventListener( 'unlock', function () {
+			blocker.style.display = 'block';
+			instructions.style.display = '';
+		} );
+        scene.add( controls.getObject() );
+
+        const onKeyDown = function ( event ) {
+            console.log(event.code);
+        switch ( event.code ) {
+            case 'ArrowUp':
+            case 'KeyW':
+                moveForward = true;
+                playWalkSound(camera);
+                break;
+
+            case 'ArrowLeft':
+            case 'KeyA':
+                moveLeft = true;
+                playWalkSound(camera);
+                break;
+
+            case 'ArrowDown':
+            case 'KeyS':
+                moveBackward = true;
+                playWalkSound(camera);
+                break;
+
+            case 'ArrowRight':
+            case 'KeyD':
+                moveRight = true;
+                playWalkSound(camera);
+                break;
+
+            case 'Space':
+                if ( canJump === true ) velocity.y += 350;
+                canJump = false;
+                break;
+        }
+        };
+
+        const onKeyUp = function ( event ) {
+
+        switch ( event.code ) {
+
+            case 'ArrowUp':
+            case 'KeyW':
+                moveForward = false;
+                break;
+
+            case 'ArrowLeft':
+            case 'KeyA':
+                moveLeft = false;
+                break;
+
+            case 'ArrowDown':
+            case 'KeyS':
+                moveBackward = false;
+                break;
+
+            case 'ArrowRight':
+            case 'KeyD':
+                moveRight = false;
+                break;
+
+        }
+
+        };
+
+        document.addEventListener( 'keydown', onKeyDown );
+        document.addEventListener( 'keyup', onKeyUp );
+
+        // ================================================================ FLOOR START ================================================================
+        showFloor(scene, vertex);
+        // ================================================================ FLOOR END ================================================================
+
+        // ================================================================ SKY STARTS ================================================================
+        // var skyGeo = new THREE.SphereGeometry(100000, 25, 25); 
+        // var loader  = new THREE.TextureLoader(),
+        // texture = loader.load( "img/sky.jpeg" );
+        // var material = new THREE.MeshPhongMaterial({ map: texture,});
+        // var sky = new THREE.Mesh(skyGeo, material);
+        // sky.material.side = THREE.BackSide;
+        // scene.add(sky);
+        // ================================================================ SKY END ================================================================
+
+        // ================================================================ TEXT START ================================================================
+        const textLoader = new THREE.FontLoader();
+		textLoader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
+
+        const textGeo = new THREE.TextGeometry( "GOPAL OSWAL ->", {
+            font: font,
+            size: 20,
+            height: 5,
+            curveSegments: 12,
+            bevelThickness: 2,
+            bevelSize: 1,
+            bevelEnabled: true
+        } 
+        );
+
+        textGeo.computeBoundingBox();
+        // const centerOffset = - 0.5 * ( textGeo.boundingBox.max.x - textGeo.boundingBox.min.x );
+
+        const textMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0xffffff } );
+
+        const text = new THREE.Mesh( textGeo, textMaterial );
+        text.position.x = 100;
+        text.position.y = 10;
+        text.position.z = 0;
+
+        // mesh.castShadow = true;
+        // mesh.receiveShadow = true;
+        scene.add( text );
+        });
+        
+        const planeMaterial = new THREE.MeshBasicMaterial( { color: 0xfffff } );
+        const cubes1 = new THREE.Mesh( new THREE.BoxGeometry( 300, 20, 20 ), planeMaterial );
+		cubes1.position.x = 200;
+		cubes1.position.y = 0;
+		cubes1.position.z = 0;
+		// cubes1.castShadow = true;
+		// cubes1.receiveShadow = true;
+		scene.add( cubes1 );
+        // camera.position.z = 200;
+        // camera.position.z = 600;
+        camera.position.z = (-200 + 50 * 53);
+        // camera.position.x = 2000;
+        camera.position.x = (300 + 50 * 53);
+        camera.position.y = 50; // for high camera
+        // ================================================================ TEXT END ================================================================
+
+        // makeBanner(scene);
+        showMainGate(scene);
+        showMainRoad(scene)
+        showSquare(scene);
+        showBoundryWall(scene);
+        showSkills(scene);
+        showProjects(scene);
+        showAbout(scene);
+
+        // rendering to html 
+        renderer.render( scene, camera );
+        document.body.appendChild( renderer.domElement );
+        animate();
+        function animate() {
+            requestAnimationFrame( animate );
+
+            const time = performance.now();
+
+            if ( controls.isLocked === true ) {
+
+                raycaster.ray.origin.copy( controls.getObject().position );
+                raycaster.ray.origin.y -= 10;
+
+                const intersections = raycaster.intersectObjects( objects );
+
+                const onObject = intersections.length > 0;
+
+                const delta = ( time - prevTime ) / 1000;
+
+                velocity.x -= velocity.x * 10.0 * delta;
+                velocity.z -= velocity.z * 10.0 * delta;
+
+                velocity.y -= 9.8 * 100.0 * delta; // 100.0 = mass
+
+                direction.z = Number( moveForward ) - Number( moveBackward );
+                direction.x = Number( moveRight ) - Number( moveLeft );
+                direction.normalize(); // this ensures consistent movements in all directions
+
+                if ( moveForward || moveBackward ) velocity.z -= direction.z * 1800.0 * delta;
+                if ( moveLeft || moveRight ) velocity.x -= direction.x * 1800.0 * delta;
+
+                if ( onObject === true ) {
+
+                    velocity.y = Math.max( 0, velocity.y );
+                    canJump = true;
+
+                }
+
+                controls.moveRight( - velocity.x * delta );
+                controls.moveForward( - velocity.z * delta );
+
+                controls.getObject().position.y += ( velocity.y * 2 * delta ); // new behavior
+                controls.getObject().position.y = 50; // for high camera
+                if ( controls.getObject().position.y < 10 ) {
+
+                    velocity.y = 0;
+                    controls.getObject().position.y = 10;
+
+                    canJump = true;
+
+                }
+
+            }
+
+            prevTime = time;
+
+            renderer.render( scene, camera );
+
+            }
+    </script>
+</body>
+</html>
