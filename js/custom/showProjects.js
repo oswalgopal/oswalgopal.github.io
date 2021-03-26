@@ -69,7 +69,7 @@ const projects = [
     },
     {
         name: 'NotesPedia',
-        image: '../../img/projects/Notespedia.png',
+        image: '../../img/projects/NotesPedia.png',
     },
     {
         name: 'Treblo',
