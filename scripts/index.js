@@ -20,6 +20,10 @@ myTerminal.input('', command => {
         handleInput(command)
 });
 
+function switchMode() {
+    window.open('3D.html', "_self");
+}
+
 const handleInput  = command => {
     if (command.length) {
         command = command.toLowerCase();
@@ -190,7 +194,13 @@ const showWork = () => {
         },
         {
             name : 'Protonshub  Technology, Indore',
-            time: 'Mar 2019 - Present',
+            time: 'Mar 2020 - Sept 2020',
+            post: 'Full Stack Web-Developer',
+            work: 'Here I am working on all skills mentioned in my skills section.'
+        },
+        {
+            name : 'Self Employed Freelancer',
+            time: 'Oct 2020 - Present',
             post: 'Full Stack Web-Developer',
             work: 'Here I am working on all skills mentioned in my skills section.'
         },
@@ -242,9 +252,108 @@ const showEducation = () => {
     }
 }
 const showProject = () => {
-    myTerminal.print('Sorry for inconvenience :(');
-    myTerminal.print('We are under Development right now');
-    myTerminal.print('This sections will be updated soon');
+
+    const projects = [
+        {
+            name: 'Builder Designs',
+            image: '../../img/projects/Builder Design.png',
+        }, 
+        {
+            name: 'ULike',
+            image: '../../img/projects/Ulike.png',
+        },
+        {
+            name: 'Ravi K das',
+            image: '../../img/projects/Ravi K Das.png',
+        }, 
+        {
+            name: 'Pai Pai Hisab',
+            image: '../../img/projects/Pai Pai Hisab.png',
+        }, 
+        {
+            name: 'KDS',
+            image: '../../img/projects/KDS.png',
+        }, 
+        {
+            name: 'OPM',
+            image: '../../img/projects/OPM.png',
+        }, 
+        {
+            name: 'Komal Bricks',
+            image: '../../img/projects/Komal Bricks.png',
+        },
+        {
+            name: 'KDERP',
+            image: '../../img/projects/KDERP.png',
+        },
+        {
+            name: 'MarkMate App',
+            image: '../../img/projects/MarkMate App.png',
+        },
+        {
+            name: 'Untap',
+            image: '../../img/projects/Untap.png',
+        },
+        {
+            name: 'Instago',
+            image: '../../img/projects/Instago.png',
+        },
+        {
+            name: 'Device Info',
+            image: '../../img/projects/Device Info.png',
+        },
+        {
+            name: 'Shool Art',
+            image: '../../img/projects/School Art.png',
+        },
+        {
+            name: 'Koetter Wood',
+            image: '../../img/projects/Koetter Wood.png',
+        },
+        {
+            name: 'Website Builder',
+            image: '../../img/projects/Website Builder.png',
+        },
+        {
+            name: 'XcellMart',
+            image: '../../img/projects/XcellMart.png',
+        },
+        {
+            name: 'Lets Connect',
+            image: '../../img/projects/Lets Connect.png',
+        },
+        {
+            name: 'NotesPedia',
+            image: '../../img/projects/Notespedia.png',
+        },
+        {
+            name: 'Treblo',
+            image: '../../img/projects/Treblo.png',
+        },
+        {
+            name: 'Umate',
+            image: '../../img/projects/Umate.png',
+        },
+        {
+            name: 'Lazy Coder',
+            image: '../../img/projects/Lazy Coder.png',
+        },
+    ];
+
+    // myTerminal.print('Sorry for inconvenience :(');
+    // myTerminal.print('We are under Development right now');
+    myTerminal.print('-----------------------------------------------------------');
+    myTerminal.print('********************** MY PROJECTS ************************');
+    myTerminal.print('-----------------------------------------------------------');
+    for(let i = 0; i < projects.length; i=i+3) {
+        const temp = Array(20).fill('\xa0').join('');
+        myTerminal.print(
+            `${projects[i].name} 
+            ${temp.substr(0, 20 - projects[i].name.length)}
+            ${projects[i + 1].name}
+            ${temp.substr(0, 20 - projects[i+1].name.length)}
+            ${projects[i + 2].name}`);
+    }
 }
 
 const showAchievements = () => {

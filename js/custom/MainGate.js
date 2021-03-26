@@ -43,7 +43,7 @@ function showMainGate(scene) {
         const text = new THREE.Mesh( textGeo, textMaterial );
         text.rotation.y = - Math.PI / 2;
         text.position.x = 380;
-        text.position.y = 130;
+        text.position.y = 135;
         text.position.z = 130;
 
         // mesh.castShadow = true;
