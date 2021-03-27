@@ -5,6 +5,8 @@ function showMainGate(scene) {
     const cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
     cylinder.position.x = 400;
     cylinder.position.z = 100;
+    cylinder.castShadow = true;
+    cylinder.receiveShadow = true; //default
     scene.add( cylinder);
     const cylinder2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
     cylinder2.position.x = 400;
@@ -42,7 +44,7 @@ function showMainGate(scene) {
 
         const text = new THREE.Mesh( textGeo, textMaterial );
         text.rotation.y = - Math.PI / 2;
-        text.position.x = 380;
+        text.position.x = 390;
         text.position.y = 135;
         text.position.z = 130;
 

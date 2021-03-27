@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Gopal Oswal</title>
     <style>
         body{
@@ -13,7 +15,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0,0,0,0.5);
+			background-color: rgba(0,0,0,0.8);
 		}
         #unblocker {
             /* display: none; */
@@ -57,6 +59,17 @@
             height: 100vh;
             z-index: 1000
         }
+        .contact {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .contact a {
+            color: #ffffff;
+            font-size: 40px;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +85,25 @@
 			Move: WASD or Arrow<br/>
 			Jump: SPACE<br/>
 			Look: MOUSE
+
+            <br />
+            <br />
+            <br />
+            <div class="contact">
+                <h3>Connect me on</h1>
+                <a href="https://github.com/oswalgopal" target="_blank">
+                    <i class="fab fa-github-square"></i>
+                </a>
+                <a href="mailto:gploswal@gmail.com" target="_blank">
+                    <i class="fas fa-envelope-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/oswalgopal/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+917024415907" target="_blank">
+                    <i class="fab fa-whatsapp-square"></i>
+                </a>
+            </div>
 		</div>
 	</div>
     <script src="js/three.min.js"></script>
@@ -133,6 +165,37 @@
         // creating a renderer 
         var renderer = new THREE.WebGLRenderer(); 
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMap.enabled = true;
+        // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+        // ================================================================ Light Start ================================================================
+        // var light = new THREE.DirectionalLight(0xffffff,1);
+        // light.position.set(50, 500, 22);
+        // light.target.position.set(300, 400, 200);
+
+        // light.shadow.camera.near = 0.5;       
+        // light.shadow.camera.far = 5000;      
+        // light.shadow.camera.left = -500;
+        // light.shadow.camera.bottom = -500;
+        // light.shadow.camera.right = 500;
+        // light.shadow.camera.top = 500;
+
+        // light.castShadow = true;
+        // scene.add(light);
+        scene.add( new THREE.AmbientLight( 0x666666 ) );
+        const light = new THREE.DirectionalLight( 0xdfebff, 1, 100 );
+        light.position.set( 50, 200, 100 );
+		light.position.multiplyScalar( 1.3 );
+        // light.position.set( 1000, 1000, 1000); //default; light shining from top
+        light.castShadow = true; // default false
+        scene.add( light );
+
+        light.shadow.mapSize.width = 1024; // default
+        light.shadow.mapSize.height = 1024; // default
+        light.shadow.camera.near = 0.5; // default
+        light.shadow.camera.far = 1000; // default
+        // const helper = new THREE.CameraHelper( light.shadow.camera );
+        // scene.add( helper );
 
         // handling change in screen size 
         window.addEventListener('resize', function(){
@@ -146,7 +209,7 @@
 
         // added controls
         var controls =  new THREE.PointerLockControls( camera, document.body );
-        controls.getObject().position.y = 50; // for high camera
+        // controls.getObject().position.y = 50; // for high camera
         const blocker = document.getElementById( 'blocker' );
         const unblocker = document.getElementById( 'unblocker' );
 		const instructions = document.getElementById( 'instructions' );
@@ -291,7 +354,7 @@
         // camera.position.z = 100;
         camera.position.x = 100;
         // camera.position.x = 2100;
-        camera.position.y = 50; // for high camera
+        // camera.position.y = 50; // for high camera
         // ================================================================ TEXT END ================================================================
 
         // makeBanner(scene);
@@ -352,7 +415,7 @@
                 controls.moveForward( - velocity.z * delta );
 
                 controls.getObject().position.y += ( velocity.y * 2 * delta ); // new behavior
-                controls.getObject().position.y = 50; // for high camera
+                // controls.getObject().position.y = 50; // for high camera
                 if ( controls.getObject().position.y < 10 ) {
 
                     velocity.y = 0;

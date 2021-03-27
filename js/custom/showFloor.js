@@ -63,5 +63,6 @@ function showFloor (scene, vertex) {
 
         const floorMaterial = new THREE.MeshBasicMaterial( {vertexColors: true} );
         const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+        floor.receiveShadow = true;
         scene.add(floor);
 }
