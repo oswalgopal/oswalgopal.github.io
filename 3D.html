@@ -71,6 +71,7 @@
             cursor: pointer;
         }
         #unblocker1 {
+            display: none;
             width: 100%;
             position: absolute;
             bottom: 10px;
@@ -87,6 +88,9 @@
                 display: none;
         }
         @media only screen and (max-width: 600px) {
+            #unblocker1 {
+                display: none;
+            }
             .playBtn {
                 display: none;
             }
@@ -254,6 +258,7 @@
         unblocker.style.display = "none";
         unblocker1.style.display = "none";
         function play() {
+            alert('game started');
 			controls.lock();
         }
 
