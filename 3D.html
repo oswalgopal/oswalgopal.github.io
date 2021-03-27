@@ -85,7 +85,6 @@
 			Move: WASD or Arrow<br/>
 			Jump: SPACE<br/>
 			Look: MOUSE
-
             <br />
             <br />
             <br />
@@ -151,8 +150,12 @@
 		const color = new THREE.Color();
         // creating a screne
         var scene = new THREE.Scene();
-        // scene.background = new THREE.Color( 0x0000000 );
-        scene.background = new THREE.Color( 0xbcfbf7 );
+        const hour = new Date().getHours();
+        if (hour >= 18) {
+            scene.background = new THREE.Color( 0x0000000 );
+        } else {
+            scene.background = new THREE.Color( 0xbcfbf7 );
+        }
         // creating a camera for view
         // fov — Camera frustum vertical field of view.
         // aspect — Camera frustum aspect ratio.
@@ -209,7 +212,7 @@
 
         // added controls
         var controls =  new THREE.PointerLockControls( camera, document.body );
-        // controls.getObject().position.y = 50; // for high camera
+        controls.getObject().position.y = 50; // for high camera
         const blocker = document.getElementById( 'blocker' );
         const unblocker = document.getElementById( 'unblocker' );
 		const instructions = document.getElementById( 'instructions' );
@@ -354,7 +357,7 @@
         // camera.position.z = 100;
         camera.position.x = 100;
         // camera.position.x = 2100;
-        // camera.position.y = 50; // for high camera
+        camera.position.y = 50; // for high camera
         // ================================================================ TEXT END ================================================================
 
         // makeBanner(scene);
@@ -415,7 +418,7 @@
                 controls.moveForward( - velocity.z * delta );
 
                 controls.getObject().position.y += ( velocity.y * 2 * delta ); // new behavior
-                // controls.getObject().position.y = 50; // for high camera
+                controls.getObject().position.y = 50; // for high camera
                 if ( controls.getObject().position.y < 10 ) {
 
                     velocity.y = 0;

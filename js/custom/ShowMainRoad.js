@@ -45,7 +45,7 @@ function showMainRoad(scene) {
 
     // right one
     const road3 = new THREE.Mesh(roadGeometry1, roadMaterial);
-    road3.position.z = 600;
+    road3.position.z = 900;
     road3.position.x = 1800;
     road3.position.y = 2;
     scene.add(road3);
@@ -115,7 +115,7 @@ function showRoadWhiteLines(scene){
         road.position.y = 3;
         scene.add(road);
     }
-    for (let i = 0 ; i < 29; i++){
+    for (let i = 0 ; i < 31; i++){
         const road1 = new THREE.Mesh(roadGeometry1, roadMaterial);
         road1.position.x = 1800;
         road1.position.z = -1800 + 150 * i;
