@@ -221,6 +221,9 @@
         instructions.addEventListener( 'click', function () {
 			controls.lock();
 		} );
+        instructions.addEventListener("touchstart", function () {
+			controls.lock();
+		} );
 
 		controls.addEventListener( 'lock', function () {
 			instructions.style.display = 'none';
