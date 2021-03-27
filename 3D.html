@@ -70,6 +70,30 @@
             text-decoration: none;
             cursor: pointer;
         }
+        #unblocker1 {
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .playBtn {
+
+        }
+        .playBtn1 {
+                display: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .playBtn {
+                display: none;
+            }
+            .playBtn1 {
+                display: unset;
+            }   
+        }
     </style>
 </head>
 <body>
@@ -77,10 +101,20 @@
         <!-- loading please wait -->
     <!-- </div> -->
     <div id="unblocker">Press ESC to exit</div>
+    <div id="unblocker1">
+        <button style="position: fixed; top: 10px; left: 10px;">Exit</button>
+        <i style="font-size: 30px; margin-bottom: 5px;" class="fas fa-arrow-circle-up"></i>
+        <div>
+            <i style="font-size: 30px;" class="fas fa-arrow-circle-left"></i>
+            <i style="font-size: 30px;" class="fas fa-arrow-circle-down"></i>
+            <i style="font-size: 30px;" class="fas fa-arrow-circle-right"></i>
+        </div>
+    </div>
     <div id="blocker">
 		<div id="instructions">
             <button style="position: absolute; top: 10px; right: 10px" onclick="switchMode()">CLI Mode</button>
-			<span style="font-size:36px; font-weight: bold;">Click to play</span>
+			<span class="playBtn" style="font-size:36px; font-weight: bold;">Click to play</span>
+            <button class="playBtn1" style="font-size:20px; font-weight: bold;" onclick="play()">Play</button>
 			<br /><br />
 			Move: WASD or Arrow<br/>
 			Jump: SPACE<br/>
@@ -215,13 +249,15 @@
         controls.getObject().position.y = 50; // for high camera
         const blocker = document.getElementById( 'blocker' );
         const unblocker = document.getElementById( 'unblocker' );
+        const unblocker1 = document.getElementById( 'unblocker1' );
 		const instructions = document.getElementById( 'instructions' );
         unblocker.style.display = "none";
+        unblocker1.style.display = "none";
+        function play() {
+			controls.lock();
+        }
 
         instructions.addEventListener( 'click', function () {
-			controls.lock();
-		} );
-        instructions.addEventListener("touchstart", function () {
 			controls.lock();
 		} );
 
@@ -229,6 +265,7 @@
 			instructions.style.display = 'none';
 			blocker.style.display = 'none';
             unblocker.style.display = "";
+            unblocker1.style.display = "";
             playSound(camera, controls);
 		} );
 
@@ -236,6 +273,7 @@
 			blocker.style.display = 'block';
 			instructions.style.display = '';
             unblocker.style.display = "none";
+            unblocker1.style.display = "none";
 		} );
         scene.add( controls.getObject() );
 
