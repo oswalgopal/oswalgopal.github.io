@@ -106,9 +106,10 @@ function showBoundryWall(scene) {
         cylinder16.position.y = 20;
         scene.add( cylinder16);
 
-        // border 4
-        addBorder4(scene);
     }
+
+    // border 4
+    addBorder4(scene);
 }
 
 function addBorder4(scene) {
