@@ -87,8 +87,20 @@
         .playBtn1 {
                 display: none;
         }
+        .mobile_instructions {
+            display: none;
+        }
         @media only screen and (max-width: 600px) {
             #unblocker1 {
+                display: none;
+            }
+            .web_intruction {
+                display: none;
+            }
+            .mobile_instructions {
+                display: unset;
+            }
+            #instructions .playBtn {
                 display: none;
             }
             .playBtn {
@@ -118,8 +130,9 @@
     <div id="blocker">
 		<div id="instructions">
             <button style="position: absolute; top: 10px; right: 10px" onclick="switchMode()">CLI Mode</button>
+            <div  class="web_intruction">
 			<span class="playBtn" style="font-size:36px; font-weight: bold;">Click to play</span>
-            <button class="playBtn1" style="font-size:20px; font-weight: bold;" onclick="play()">Play</button>
+            <!-- <button class="playBtn1" style="font-size:20px; font-weight: bold;" onclick="play()">Play</button> -->
 			<br /><br />
 			Move: WASD or Arrow<br/>
 			Jump: SPACE<br/>
@@ -127,6 +140,12 @@
             <br />
             <br />
             <br />
+        </div>
+        <div class="mobile_instructions">
+            Your mobile browser is not able to render 3D view 
+            <br />
+            Please try on computer devices
+        </div>    
             <div class="contact">
                 <h3>Connect me on</h1>
                 <a href="https://github.com/oswalgopal" target="_blank">
