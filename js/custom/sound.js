@@ -62,12 +62,12 @@ function playDessert(camera, controls) {
 
     // load a sound and set it as the Audio object's buffer
     const audioLoader = new THREE.AudioLoader();
-    audioLoader.load( '../../sound/Forest 2.mp3', function( buffer ) {
-        sound.setBuffer( buffer );
-        sound.setLoop( true );
-        sound.setVolume( 0.2 );
-        sound.play();
-    });
+    // audioLoader.load( '../../sound/Forest 2.mp3', function( buffer ) {
+    //     sound.setBuffer( buffer );
+    //     sound.setLoop( true );
+    //     sound.setVolume( 0.2 );
+    //     sound.play();
+    // });
 
     // audioLoader.load( '../../sound/Apoxode_-_26.mp3', function( buffer ) {
     //     sound.setBuffer( buffer );
@@ -75,6 +75,12 @@ function playDessert(camera, controls) {
     //     sound.setVolume( 1 );
     //     sound.play();
     // });
+    audioLoader.load( '../../sound/Twin Musicom - Midnight in the Graveyard.mp3', function( buffer ) {
+        sound.setBuffer( buffer );
+        sound.setLoop( true );
+        sound.setVolume( 1 );
+        sound.play();
+    });
 
     controls.addEventListener( 'unlock', function () {
         // blocker.style.display = 'block';
