@@ -62,6 +62,8 @@ function showFloor (scene, vertex) {
         floorGeometry.setAttribute( 'color', new THREE.Float32BufferAttribute( colorsFloor, 3 ) );
 
         const floorMaterial = new THREE.MeshBasicMaterial( {vertexColors: true} );
+        // var floorMaterial = new THREE.ShadowMaterial();
+        // floorMaterial.opacity = 0.2;
         const floor = new THREE.Mesh(floorGeometry, floorMaterial);
         floor.receiveShadow = true;
         scene.add(floor);

@@ -15,7 +15,8 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0,0,0,0.8);
+			/* background-color: rgba(0,0,0,0.8); */
+            background-color: #5547a4;
 		}
         #unblocker {
             /* display: none; */
@@ -387,10 +388,6 @@
         document.addEventListener( 'keydown', onKeyDown );
         document.addEventListener( 'keyup', onKeyUp );
 
-        // ================================================================ FLOOR START ================================================================
-        showFloor(scene, vertex);
-        // ================================================================ FLOOR END ================================================================
-
         // ================================================================ SKY STARTS ================================================================
         // var skyGeo = new THREE.SphereGeometry(100000, 25, 25); 
         // var loader  = new THREE.TextureLoader(),
@@ -447,6 +444,7 @@
         // ================================================================ TEXT END ================================================================
 
         // makeBanner(scene);
+        showFloor(scene, vertex);
         showMainGate(scene);
         showMainRoad(scene)
         showSquare(scene);
