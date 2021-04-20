@@ -128,10 +128,40 @@
 
         }
         .playBtn1 {
-                display: none;
+            display: none;
         }
         .mobile_instructions {
             display: none;
+        }
+        .playIcon {
+            font-size: 100px;
+            background: #5547a4;
+            border-radius: 100%;
+            padding: 5px;
+        }
+        .playIconWrapper1 {
+            width: 150px;
+            height: 150px;
+            background: #fbfbfb63;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation:  playIconAnimation1; 
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        .playIconWrapper2 {
+            width: 200px;
+            height: 200px;
+            background: #e4dddd61;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation:  playIconAnimation2; 
+            animation-duration: 3s;
+            animation-iteration-count: infinite;    
         }
         @media only screen and (max-width: 600px) {
             #unblocker1 {
@@ -165,6 +195,41 @@
                 opacity: 0%;
             }
         }
+        @keyframes playIconAnimation1 {
+            0% {
+                width: 90px;
+                height: 90px;
+            }
+            50% {
+                width: 150px;
+                height: 150px;
+
+            }
+            100% {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        @keyframes playIconAnimation2 {
+            0% {
+                width: 90px;
+                height: 90px;
+            }
+            50% {
+                width: 200px;
+                height: 200px;
+            }
+            100% {
+                height: 90px;
+                width: 90px;
+            }
+        }
+        .settings {
+            position: absolute;
+            right: 10px;
+            top: 100px;
+            width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -185,9 +250,34 @@
     <div id="unblocker1">
     </div>
     <div id="blocker">
+        <div class="settings">
+            <h3>Customize you experience</h1>
+            <p>Please select day mode:</p>
+            <input type="radio" id="day" name="day" value="day">
+            <label for="day">
+                <i class="fas fa-sun" style="font-size: 18px;"></i>
+                Day</label><br>
+            <input type="radio" id="night" name="day" value="night">
+            <label for="night">
+                <i class="far fa-moon"></i>
+                Night</label><br>
+            <input type="radio" id="auto" name="day" value="auto" checked>
+            <label for="auto">
+                <i class="fas fa-sliders-h"></i>
+                Auto</label>
+        </div>
 		<div id="instructions">
             <button style="position: absolute; top: 10px; right: 10px" onclick="switchMode()">CLI Mode</button>
             <div  class="web_intruction">
+            <div style="display: flex;
+            justify-content: center;">
+                <div class="playIconWrapper2">
+                    <div class="playIconWrapper1">
+                        <i class="far fa-play-circle playIcon"></i>
+                    </div>
+                </div>  
+            </div>
+            <br />
 			<span class="playBtn" style="font-size:36px; font-weight: bold;">Click to play</span>
             <!-- <button class="playBtn1" style="font-size:20px; font-weight: bold;" onclick="play()">Play</button> -->
 			<br /><br />
@@ -273,6 +363,27 @@
         } else {
             scene.background = new THREE.Color( 0xbcfbf7 );
         }
+        function setDayMode() {
+            let mode = ""
+            const el = document.getElementsByName('day');
+            for (let i = 0; i < el.length; i++) {
+                if (el[i].checked) {
+                    mode = el[i].value;
+                }
+            }
+            if (mode === 'day') {
+                scene.background = new THREE.Color( 0xbcfbf7 );
+            } else if (mode === 'night') {
+                scene.background = new THREE.Color( 0x0000000 );
+            } else {
+                const hour = new Date().getHours();
+                if (hour >= 18) {
+                    scene.background = new THREE.Color( 0x0000000 );
+                } else {
+                    scene.background = new THREE.Color( 0xbcfbf7 );
+                }
+            }
+        }
         // creating a camera for view
         // fov — Camera frustum vertical field of view.
         // aspect — Camera frustum aspect ratio.
@@ -356,6 +467,7 @@
         });
 
         instructions.addEventListener( 'click', function () {
+            setDayMode();
 			controls.lock();
 		} );
 
