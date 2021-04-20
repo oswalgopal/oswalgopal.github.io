@@ -22,7 +22,35 @@
             /* display: none; */
             position: absolute;
             top: 10px;
+            right: 10px;
+        }
+        #game_instructions {
+            position: absolute;
+            top: 10px;
             left: 10px;
+            z-index: 1;
+            border: 2px solid #5547a4;
+            color: #fff;
+            padding: 10px;
+            height: auto;
+            background-color: #5547a4b5;
+            border-radius: 7px;
+            font-weight: bold;
+            text-align: justify;
+            font-family: serif;
+            max-width: 250px;
+        }
+        #game_instructions p {
+            margin: 0;
+            padding: 0;
+        }
+        #interaction_text {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            animation: interaction_animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
         }
 
 		#instructions {
@@ -126,6 +154,17 @@
                 z-index: 100000;
             }   
         }
+        @keyframes interaction_animation {
+            0%{
+                opacity: 0;
+            }
+            50% {
+                opacity: 100%;
+            }
+            100% {
+                opacity: 0%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -138,14 +177,12 @@
         </h1>
     </div>
     <div id="unblocker">Press ESC to exit</div>
+    <div id="game_instructions">
+    <!-- <div style="position: absolute ; top: 10px; left: 10px;"> -->
+        <p id="game_instructions_text"></p>
+    </div>
+    <span id="interaction_text"></span>
     <div id="unblocker1">
-        <!-- <button style="position: fixed; top: 10px; left: 10px;">Exit</button>
-        <i style="font-size: 30px; margin-bottom: 5px;" class="fas fa-arrow-circle-up"></i>
-        <div>
-            <i style="font-size: 30px;" class="fas fa-arrow-circle-left"></i>
-            <i style="font-size: 30px;" class="fas fa-arrow-circle-down"></i>
-            <i style="font-size: 30px;" class="fas fa-arrow-circle-right"></i>
-        </div> -->
     </div>
     <div id="blocker">
 		<div id="instructions">
@@ -197,6 +234,7 @@
     <script src="js/custom/sound.js"></script>
     <script src="js/custom/showProjects.js"></script>
     <script src="js/custom/showAbout.js"></script>
+    <script src="js/custom/instruction_popup.js"></script>
     
     <script>
         document.onreadystatechange = function () {
@@ -294,14 +332,28 @@
         controls.getObject().position.y = 50; // for high camera
         const blocker = document.getElementById( 'blocker' );
         const unblocker = document.getElementById( 'unblocker' );
+        const game_instructions = document.getElementById( 'game_instructions' );
+        const game_instructions_text = document.getElementById('game_instructions_text');
         const unblocker1 = document.getElementById( 'unblocker1' );
 		const instructions = document.getElementById( 'instructions' );
         unblocker.style.display = "none";
+        game_instructions.style.display = "none";
         unblocker1.style.display = "none";
         function play() {
             alert('game started');
 			controls.lock();
         }
+        const audio_listener = new THREE.AudioListener();
+        camera.add( audio_listener );
+        // create a global audio source
+        const instruction_sound = new THREE.Audio( audio_listener );
+        // load a sound and set it as the Audio object's buffer
+        const audioLoader = new THREE.AudioLoader();
+        audioLoader.load( '../../sound/alert_tune.mp3', function( buffer ) {
+            instruction_sound.setBuffer( buffer );
+            instruction_sound.setLoop( false );
+            instruction_sound.setVolume( 1 );
+        });
 
         instructions.addEventListener( 'click', function () {
 			controls.lock();
@@ -311,15 +363,20 @@
 			instructions.style.display = 'none';
 			blocker.style.display = 'none';
             unblocker.style.display = "";
+            game_instructions.style.display = "";
             unblocker1.style.display = "";
             playSound(camera, controls);
+            // instruction_sound.stop();
 		} );
 
 		controls.addEventListener( 'unlock', function () {
 			blocker.style.display = 'block';
+            // game_instructions.style.display = "block";
 			instructions.style.display = '';
+            document.getElementById('interaction_text').style.display = "none";
             unblocker.style.display = "none";
             unblocker1.style.display = "none";
+            instruction_sound.stop();
 		} );
         scene.add( controls.getObject() );
 
@@ -453,12 +510,15 @@
         showProjects(scene);
         showAbout(scene);
 
+
         // rendering to html 
         renderer.render( scene, camera );
         document.body.appendChild( renderer.domElement );
         animate();
         function animate() {
             requestAnimationFrame( animate );
+            // console.log(controls.getObject().position);
+            checkPosition(game_instructions, game_instructions_text, controls.getObject().position, instruction_sound);
 
             const time = performance.now();
 

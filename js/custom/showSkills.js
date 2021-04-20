@@ -84,6 +84,7 @@ function showSkills(scene) {
     showSkillsBanner(scene);
     showStreetLamp(scene);
     showRoadText(scene);
+    showHouses(scene);
     // showEnd(scene);
 }
 
@@ -345,4 +346,26 @@ function showRoadText(scene){
     // mesh.receiveShadow = true;
     scene.add( text );
     });
+}
+
+
+function showHouses(scene) {
+    // let skillBoardImg = [
+    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
+    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
+    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
+    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
+    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
+    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
+    // ]
+    // var skillBoardMaterial = new THREE.MeshFaceMaterial(skillBoardImg);
+    for(let i = 0 ; i < 8; i++) {
+        const HouseMaterial = new THREE.MeshBasicMaterial( { color: 0x6b7d8d } );
+        const House = new THREE.Mesh(new THREE.BoxGeometry(100, 800 + 400 * Math.random(), 150 + 100 * Math.random()), HouseMaterial);
+        // House.rotation.y = 100;
+        House.position.x = 500 + 1000 * Math.random();
+        House.position.z = -300  - 200 * (i + 1);
+        House.position.y = 0;
+        scene.add( House);
+    }
 }
