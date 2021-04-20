@@ -7,21 +7,23 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
     game_instructions_text_copy = game_instructions_text;
     instruction_sound_copy = instruction_sound;
     // game_instructions_copy.style.display = "none";
-    console.log(position);
+    // console.log(position);
     if (position.x > 300)  {
         showWelcomeText();
     }
-    if (position.x > 1800 && position.z > 500) {
+    if (position.x > 1600 && position.z > 500) {
         showProjectText()
     }
 }
 var count = 0;
-function showWelcomeText() {
+ async function showWelcomeText() {
         count++;
         if (count == 1) {
             instruction_sound_copy.play();
             game_instructions_copy.style.display = "block";
-            game_instructions_text_copy.innerText = "Welcome to My World!. I am really happy to see you here";
+            // game_instructions_text_copy.innerText = "";
+            const text = "Welcome to My World!. I am really happy to see you here";
+            typeWriterWrapper(text)
             closeText();
         }
 }
@@ -38,14 +40,34 @@ function closeText(){
 var projectCount = 0;
 function showProjectText() {
     projectCount++;
-        if (projectCount == 1) {
+        if (projectCount === 1) {
             instruction_sound_copy.play();
             game_instructions_copy.style.display = "block";
-            game_instructions_text_copy.innerText = "It seems you are looking into my projects. press Shift key to check my resume";
+            const text = "It seems you are looking into my projects. press Shift key to check my resume";
+            typeWriterWrapper(text);
             closeText();
         }
         interaction_text.innerText = "Press Shift to Check my resume";
+        document.addEventListener("keyup", ev => {
+            console.log(ev);
+            if (ev.code === 'ShiftLeft' ||  ev.code === 'ShiftRight') {
+                window.open('resume');
+            }
+        })
         setTimeout(() => {
             interaction_text.innerText = "";
         }, 1000)
+}
+
+function typeWriterWrapper(txt){
+    var i = 0;
+    var speed = 50;
+    typeWriter();
+    function typeWriter() {
+    if (i < txt.length) {
+        game_instructions_text_copy.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+    }
 }
