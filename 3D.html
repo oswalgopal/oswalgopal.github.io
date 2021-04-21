@@ -49,8 +49,10 @@
             bottom: 100px;
             left: 50%;
             animation: interaction_animation;
-            animation-duration: 3s;
+            animation-duration: 1.5s;
             animation-iteration-count: infinite;
+            /* color: #5547a4; */
+            font-weight: bold;
         }
 
 		#instructions {
@@ -325,6 +327,7 @@
     <script src="js/custom/showProjects.js"></script>
     <script src="js/custom/showAbout.js"></script>
     <script src="js/custom/instruction_popup.js"></script>
+    <script src="js/custom/showField.js"></script>
     
     <script>
         document.onreadystatechange = function () {
@@ -475,7 +478,8 @@
 			instructions.style.display = 'none';
 			blocker.style.display = 'none';
             unblocker.style.display = "";
-            game_instructions.style.display = "";
+            game_instructions.style.display = "none";
+            document.getElementById('interaction_text').style.display = "";
             unblocker1.style.display = "";
             playSound(camera, controls);
             // instruction_sound.stop();
@@ -621,16 +625,32 @@
         showSkills(scene);
         showProjects(scene);
         showAbout(scene);
+        showField(scene);
+        // showStars();
+        // function showStars() {
+        //     for (let i = 0; i < 1000; i++) {
+        //         const geometry = new THREE.CircleGeometry( 2, 2 );
+        //         const material = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+        //         const circle = new THREE.Mesh( geometry, material );
+        //         circle.position.y = 500;
+        //         circle.position.x = i%2 == 0 ? (200 * i + Math.random() * 200) : (-200 * i + Math.random() * 200);
+        //         circle.position.z = i%2 == 0 ? (500 * i + Math.random() * 500) : (-500 * i + Math.random() * 500);
+        //         scene.add( circle );
+        //     }
+        // }
 
 
         // rendering to html 
         renderer.render( scene, camera );
         document.body.appendChild( renderer.domElement );
         animate();
+        setInterval(() => {
+            checkPosition(game_instructions, game_instructions_text, controls.getObject().position, instruction_sound);
+        }, 1000)
         function animate() {
             requestAnimationFrame( animate );
             // console.log(controls.getObject().position);
-            checkPosition(game_instructions, game_instructions_text, controls.getObject().position, instruction_sound);
+            // checkPosition(game_instructions, game_instructions_text, controls.getObject().position, instruction_sound);
 
             const time = performance.now();
 

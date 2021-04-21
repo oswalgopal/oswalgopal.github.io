@@ -7,7 +7,7 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
     game_instructions_text_copy = game_instructions_text;
     instruction_sound_copy = instruction_sound;
     // game_instructions_copy.style.display = "none";
-    console.log(position);
+    // console.log(position);
     if (position.x > 300)  {
         showWelcomeText();
     }
@@ -16,6 +16,24 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
     }
     if (position.x > 1700 && position.z < -150) {
         showSkillText();
+    }
+    if (position.x > 800 && position.x < 1300) {
+            interaction_text.innerText = "Press M for Gmail \n G for Github \n L for Linkedin \n P for Call";
+            document.addEventListener("keyup", ev => {
+                console.log(ev);
+                if (ev.code === 'KeyL') {
+                    window.open('https://www.linkedin.com/in/oswalgopal/');
+                } else if (ev.code === 'KeyG') {
+                    window.open('https://github.com/oswalgopal');
+                } else if (ev.code === 'KeyM') {
+                    window.open('mailto:gploswal@gmail.com');
+                } else if (ev.code === 'KeyP') {
+                    window.open('https://api.whatsapp.com/send?phone=+917024415907');
+                }
+            });
+            setTimeout(() => {
+                interaction_text.innerText = "";
+            }, 5000)
     }
 }
 var count = 0;
@@ -59,7 +77,7 @@ function showProjectText() {
         })
         setTimeout(() => {
             interaction_text.innerText = "";
-        }, 1000)
+        }, 5000)
 }
 var skillCount = 0;
 function showSkillText() {
