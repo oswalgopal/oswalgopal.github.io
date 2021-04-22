@@ -350,21 +350,56 @@ function showRoadText(scene){
 
 
 function showHouses(scene) {
-    // let skillBoardImg = [
-    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
-    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
-    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
-    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
-    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
-    //     new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('skills[i].image'), side: THREE.DoubleSide}),
-    // ]
-    // var skillBoardMaterial = new THREE.MeshFaceMaterial(skillBoardImg);
+    const img = [
+        {path: '../../img/building/building1.png'},
+        {path: '../../img/building/building2.png'},
+        {path: '../../img/building/building3.png'},
+        {path: '../../img/building/building4.png'},
+        {path: '../../img/building/building5.png'},
+        {path: '../../img/building/building1.png'},
+        {path: '../../img/building/building2.png'},
+        {path: '../../img/building/building3.png'},
+        {path: '../../img/building/building4.png'},
+        {path: '../../img/building/building5.png'},
+    ]
     for(let i = 0 ; i < 8; i++) {
-        const HouseMaterial = new THREE.MeshBasicMaterial( { color: 0x6b7d8d } );
-        const House = new THREE.Mesh(new THREE.BoxGeometry(100, 800 + 400 * Math.random(), 150 + 100 * Math.random()), HouseMaterial);
-        // House.rotation.y = 100;
-        House.position.x = 500 + 1000 * Math.random();
-        House.position.z = -300  - 200 * (i + 1);
+        // const HouseMaterial = new THREE.MeshBasicMaterial( { color: 0x6b7d8d } );
+        const no = Math.floor(Math.random() * 6) + 1  ;
+        let buildingImg = [
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+        ]
+        var HouseMaterial = new THREE.MeshFaceMaterial(buildingImg);
+        const House = new THREE.Mesh(new THREE.BoxGeometry(100, 1000 + 400 * Math.random(), 150 + 100 * Math.random()), HouseMaterial);
+        // House.position.x = 500 + 1000 * Math.random();
+        // House.position.z = -300  - 200 * (i + 1);
+        House.position.x = 1200;
+        House.position.z = - 300 * (i + 1);
+        House.position.y = 0;
+        scene.add( House);
+    }
+
+    for(let i = 0 ; i < 8; i++) {
+        const no = Math.floor(Math.random() * 6) + 1  ;
+        // const HouseMaterial = new THREE.MeshBasicMaterial( { color: 0x6b7d8d } );
+        let buildingImg = [
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load(img[no].path), side: THREE.DoubleSide}),
+        ]
+        var HouseMaterial = new THREE.MeshFaceMaterial(buildingImg);
+        const House = new THREE.Mesh(new THREE.BoxGeometry(100, 1000 + 400 * Math.random(), 150 + 100 * Math.random()), HouseMaterial);
+        // House.position.x = 500 + 1000 * Math.random();
+        // House.position.z = -300  - 200 * (i + 1);
+        House.position.x = 700;
+        House.position.z = - 300 * (i + 1);
         House.position.y = 0;
         scene.add( House);
     }
