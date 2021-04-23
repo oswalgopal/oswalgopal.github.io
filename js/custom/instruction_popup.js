@@ -7,7 +7,7 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
     game_instructions_text_copy = game_instructions_text;
     instruction_sound_copy = instruction_sound;
     // game_instructions_copy.style.display = "none";
-    // console.log(position);
+    console.log(position);
     if (position.x > 300)  {
         showWelcomeText();
     }
@@ -35,6 +35,9 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
                 interaction_text.innerText = "";
             }, 5000)
     }
+    if (position.x > 2100 && position.z > 100 && position.z < 300) {
+        showOtherSkillText()
+    }
 }
 var count = 0;
  async function showWelcomeText() {
@@ -47,6 +50,18 @@ var count = 0;
             typeWriterWrapper(text)
             closeText();
         }
+}
+var showOtherSkillTextCount = 0;
+function showOtherSkillText() {
+    showOtherSkillTextCount++;
+    if (showOtherSkillTextCount == 1) {
+        instruction_sound_copy.play();
+        game_instructions_copy.style.display = "block";
+        // game_instructions_text_copy.innerText = "";
+        const text = "Welcome to My World!. I am really happy to see you here";
+        typeWriterWrapper(text)
+        closeText();
+    }
 }
 
 
