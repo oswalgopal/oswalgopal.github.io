@@ -58,7 +58,7 @@ function showOtherSkillText() {
         instruction_sound_copy.play();
         game_instructions_copy.style.display = "block";
         // game_instructions_text_copy.innerText = "";
-        const text = "Welcome to My World!. I am really happy to see you here";
+        const text = "What people get admired and appreciated because of their soft skills ";
         typeWriterWrapper(text)
         closeText();
     }

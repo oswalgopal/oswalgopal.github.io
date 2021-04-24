@@ -328,6 +328,7 @@
     <script src="js/custom/showAbout.js"></script>
     <script src="js/custom/instruction_popup.js"></script>
     <script src="js/custom/showField.js"></script>
+    <script src="js/custom/ShowGarden.js"></script>
     
     <script>
         document.onreadystatechange = function () {
@@ -486,6 +487,7 @@
 		} );
 
 		controls.addEventListener( 'unlock', function () {
+            console.log('called');
 			blocker.style.display = 'block';
             // game_instructions.style.display = "block";
 			instructions.style.display = '';
@@ -611,8 +613,8 @@
 		scene.add( cubes1 );
         camera.position.z = 600;
         // camera.position.z = 100;
-        camera.position.x = 100;
-        // camera.position.x = 2100;
+        // camera.position.x = 100;
+        camera.position.x = 3000;
         camera.position.y = 50; // for high camera
         // ================================================================ TEXT END ================================================================
 
@@ -626,6 +628,7 @@
         showProjects(scene);
         showAbout(scene);
         showField(scene);
+        showGarden(scene);
         // showStars();
         // function showStars() {
         //     for (let i = 0; i < 1000; i++) {
