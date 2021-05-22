@@ -14,7 +14,7 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
     if (position.x > 1600 && position.z > 500) {
         showProjectText();
     }
-    if (position.x > 1700 && position.z < -150) {
+    if (position.x > 1700 && position.x < 2100 && position.z < -150) {
         showSkillText();
     }
     if (position.x > 800 && position.x < 1300) {
@@ -38,6 +38,12 @@ function checkPosition(game_instructions, game_instructions_text, position, inst
     if (position.x > 2100 && position.z > 100 && position.z < 300) {
         showOtherSkillText()
     }
+    if (position.x > 2200 && position.x < 3100 && position.z < -150) {
+        showGardenText()
+    }
+    if (position.x > 1500 && position.x > 400 && position.z > 600) {
+        showFieldText();
+    }
 }
 var count = 0;
  async function showWelcomeText() {
@@ -46,11 +52,24 @@ var count = 0;
             instruction_sound_copy.play();
             game_instructions_copy.style.display = "block";
             // game_instructions_text_copy.innerText = "";
-            const text = "Welcome to My World!. I am really happy to see you here";
+            const text = "Welcome to My World!. I am really happy to see you here.";
             typeWriterWrapper(text)
             closeText();
         }
 }
+var showGardenText = 0;
+function showGardenText(){
+    showGardenText++;
+    if (showGardenText == 1) {
+        instruction_sound_copy.play();
+        game_instructions_copy.style.display = "block";
+        // game_instructions_text_copy.innerText = "";
+        const text = "A Garden is a friend where you can visit anytime. It will heal up your all stress and provide you a great level of pleasure.";
+        typeWriterWrapper(text)
+        closeText();
+    }
+}
+
 var showOtherSkillTextCount = 0;
 function showOtherSkillText() {
     showOtherSkillTextCount++;
@@ -58,7 +77,20 @@ function showOtherSkillText() {
         instruction_sound_copy.play();
         game_instructions_copy.style.display = "block";
         // game_instructions_text_copy.innerText = "";
-        const text = "What people get admired and appreciated because of their soft skills ";
+        const text = "What people get admired and appreciated because of their soft skills.";
+        typeWriterWrapper(text)
+        closeText();
+    }
+}
+
+var showFieldCount = 0;
+function showFieldText() {
+    showFieldCount++;
+    if (showFieldCount == 1) {
+        instruction_sound_copy.play();
+        game_instructions_copy.style.display = "block";
+        // game_instructions_text_copy.innerText = "";
+        const text = "Field is place where you lose your mind and find your soul.";
         typeWriterWrapper(text)
         closeText();
     }
@@ -79,7 +111,7 @@ function showProjectText() {
         if (projectCount === 1) {
             instruction_sound_copy.play();
             game_instructions_copy.style.display = "block";
-            const text = "It seems you are looking into my projects. press Shift key to check my resume";
+            const text = "It seems you are looking into my projects. press Shift key to check my resume.";
             typeWriterWrapper(text);
             closeText();
         }
@@ -100,7 +132,7 @@ function showSkillText() {
     if (skillCount === 1) {
         instruction_sound_copy.play();
         game_instructions_copy.style.display = "block";
-        const text = "Skills are very important asset a person have. Explore out some of my skills";
+        const text = "Skills are very important asset a person have. Explore out some of my skills.";
         typeWriterWrapper(text);
         closeText();
     }
