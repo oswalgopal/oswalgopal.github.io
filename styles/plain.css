@@ -13,6 +13,27 @@ body {
 .color-theme {
     color: var(--theme-color);
 }
+.width-75 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+    .width-75 {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .name_container {
+        text-align: center !important;
+    }
+    .name_container h1 {
+        font-size: 40px !important;
+    }
+    .name_container p {
+        font-size: 26px !important;
+    }
+}
 
 @keyframes logoAnimation {
     0% {
@@ -105,4 +126,15 @@ section h2:after {
 }
 .name_container a i:hover {
     color: var(--theme-color);
+}
+
+#skills img {
+    box-shadow: 2px 0 16px var(--theme-color);
+    transition: transform 500ms;
+}
+
+#skills img:hover {
+    box-shadow: 5px 0 50px var(--theme-color);
+    transform: scale(1.1);
+    cursor: pointer;
 }
