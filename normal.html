@@ -25,7 +25,8 @@
     <p title="3D Mode">
         <i class="fas fa-street-view"></i> &nbsp; 3D Mode
     </p>
-    <button onclick="closeIntro()">Understood</button>
+    <span class="text-light p-3">Use the icons on top to change the website mode</span>
+    <button class="btn btn-light" onclick="closeIntro()">Understood</button>
     <div class="circle"></div>
 </div>
 <div class="change_mod">
@@ -462,7 +463,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
-
     setTimeout(() => {
         if (localStorage.getItem('intro') !== 'true') {
             localStorage.setItem('intro', 'true');
@@ -470,7 +470,6 @@
             $('#intro').css('display', 'flex');
         }
     }, 5000);
-
     function closeIntro() {
         $('#intro').hide(1000);
     }
