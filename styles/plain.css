@@ -35,6 +35,12 @@ body {
         font-size: 26px !important;
     }
 }
+@media only screen and (max-width: 420px) {
+    .my_image {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
 
 @keyframes logoAnimation {
     0% {
