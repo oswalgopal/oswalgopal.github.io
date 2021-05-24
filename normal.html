@@ -15,6 +15,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
 <div class="intro" id="intro">
@@ -40,7 +41,7 @@
 <section id="home" class="bg d-flex flex-column justify-content-center">
     <div class="container name_container" data-aos="fade-left" data-aos-duration="1000">
         <h1>Gopal Oswal</h1>
-        <p>I'm <span>FullStack Developer</span></p>
+        <p>I'm <span id="typeabletext">FullStack Developer</span></p>
         <div>
             <a href="https://github.com/oswalgopal" target="_blank">
                 <i class="fab fa-github-square"></i>
@@ -462,6 +463,24 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+
+    var app = document.getElementById('typeabletext');
+    var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 75,
+    });
+    typewriter
+        .pauseFor(300)
+        .typeString('Full Stack Developer')
+        .pauseFor(300)
+        .deleteAll()
+        .typeString('Web Designer')
+        .pauseFor(300)
+        .deleteAll()
+        .typeString('Competitive Programmer')
+        .pauseFor(300)
+        .start();
+
     AOS.init();
     setTimeout(() => {
         if (localStorage.getItem('intro') !== 'true') {
