@@ -723,18 +723,18 @@
                 </div>
             </div>
             <div class="col-12 col-md-8">
-                <form class="p-2" data-aos-duration="1000" data-aos="fade-up">
+                <form class="p-2" data-aos-duration="1000" data-aos="fade-up" onsubmit="sendMail(event)">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Name" required>
+                            <input type="text" class="form-control" placeholder="Name" required id="name">
                         </div>
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="text" pattern="[789][0-9]{9}" class="form-control" placeholder="Phone (valid 10 digit number)" required id="phone">
                         </div>
                     </div>
-                    <input type="text" class="form-control mt-2" placeholder="Subject" required>
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Message..." class="form-control mt-2"
-                              required></textarea>
+                    <input type="text" class="form-control mt-2" placeholder="Subject" required id="subject">
+                    <textarea name="" cols="30" rows="5" placeholder="Message..." class="form-control mt-2"
+                              required id="message"></textarea>
                     <div class="d-flex justify-content-center p-3">
                         <button type="submit" class="submit">Submit</button>
                     </div>
@@ -835,6 +835,16 @@
     function closeIntro() {
         $('#intro').hide(1000);
         $('.change_mod').css('position', 'absolute');
+    }
+    function sendMail(ev) {
+        ev.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        window.open(`mailto:gploswal@gmail.com?subject=${subject}&body=${
+            'I am ' + name + ' ' + phone + '. ' +
+            message}`);
     }
 </script>
 </body>
