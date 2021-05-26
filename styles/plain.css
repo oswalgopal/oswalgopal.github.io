@@ -306,6 +306,10 @@ svg {
 
 #about li a {
     color: black;
+    cursor: pointer;
+}
+#about li a:hover {
+    cursor: pointer;
 }
 .scrollTop {
     padding: 10px;
@@ -323,4 +327,47 @@ svg {
     cursor: pointer;
     z-index: 10000;
 }
+
+.pin {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    border: 2px solid black;
+    margin-top: 5px;
+    z-index: 100000;
+}
+
+.left-rotate {
+    -ms-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    margin-top: 28px;
+    margin-left: 83px;
+}
+
+.right-rotate {
+    -ms-transform: rotate(155deg);
+    -webkit-transform: rotate(155deg);
+    transform: rotate(155deg);
+    margin-top: 28px;
+    margin-left: -83px;
+}
+.line {
+    height: 1px;
+    width: 93px;
+    position: absolute;
+    background-color: var(--theme-color);
+    padding: 1px;
+}
+
+.project-img {
+    margin-top: 20px;
+    transform: scale(0.7);
+    width: 285px;
+    height: 172px;
+    box-shadow: 0 20px 20px -6px #4e4c4c;
+}
+
 
