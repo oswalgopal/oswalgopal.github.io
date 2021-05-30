@@ -1,39 +1,851 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oswal Gopal</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gopal Oswal</title>
+    <link rel="stylesheet" href="./styles/plain.css">
+    <link rel="stylesheet" href="./styles/intro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
-<body oncontextmenu="return false;">
-    <button style="position: absolute; top: 10px; right: 10px" onclick="switchMode()">3D Mode</button>
-    <div id="terminal"></div>
-    <script src="scripts/terminal.js"></script>
-    <script src="scripts/index.js"></script>
-    <script>
-       /* document.onkeydown = function(e) {
-            if(event.keyCode == 123) {
-                alert('Hey Nyc Trick but not permitted');
-                return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                alert('Hey Nyc Trick but not permitted');
-                return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-                alert('Hey Nyc Trick but not permitted');
-                return false;
-            }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                alert('Hey Nyc Trick but not permitted');
-                return false;
-            }
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                alert('Hey Nyc Trick but not permitted');
-                return false;
-            }
-        }*/
-    </script>
+<body>
+<div class="intro" id="intro">
+    <h1>Open Portfolio in </h1>
+    <p title="Cli Mode">
+        <i class="fas fa-terminal"></i> &nbsp; Cli Mode
+    </p>
+    <p title="3D Mode">
+        <i class="fas fa-street-view"></i> &nbsp; 3D Mode
+    </p>
+    <span class="text-light p-3">Use the icons on top to change the website mode</span>
+    <button class="btn btn-light" onclick="closeIntro()">Understood</button>
+    <div class="circle"></div>
+</div>
+<div class="change_mod">
+    <a href="cli.html" target="_blank">
+        <i class="fas fa-terminal"></i>
+    </a>
+    <a href="3D.html" target="_blank">
+        <i class="fas fa-street-view"></i>
+    </a>
+</div>
+<section id="home" class="bg d-flex flex-column justify-content-center">
+    <div class="container name_container" data-aos="fade-left" data-aos-duration="1000">
+        <h1>Gopal Oswal</h1>
+        <p>I'm <span id="typeabletext">FullStack Developer</span></p>
+        <div>
+            <a href="https://github.com/oswalgopal" target="_blank">
+                <i class="fab fa-github-square"></i>
+            </a>
+            <a href="mailto:gploswal@gmail.com" target="_blank">
+                <i class="fas fa-envelope-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/oswalgopal/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+917024415907" target="_blank">
+                <i class="fab fa-whatsapp-square"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="about" class="sections">
+    <div class="container">
+        <h2 data-aos-duration="1000" data-aos="fade-up">About</h2>
+        <p class="info" data-aos-duration="1000" data-aos="fade-up">
+            I am tech enthusiast with expertise in web and mobile app development. I love to explore new technologies. I
+            likes to dig into project requirement and completes them with modern technologies in a very efficient way. I
+            am also a competitive programmer with 3 * on Codechef and 2 * on Leetcode.
+        </p>
+        <div class="row mt-5">
+            <div class="col-lg-4 col-12 d-flex justify-content-center">
+                <img data-aos-duration="1000" class="my_image" data-aos="fade-up" src="img/MyImage.jpeg" alt=""
+                     width="420px"
+                     height="420px"/>
+            </div>
+
+            <div class="col-lg-8 col-12 mt-md-0 mt-5">
+                <h4 class="text-bold color-theme" data-aos-duration="1000" data-aos="fade-up">Full Stack Developer &&
+                    Desginer</h4>
+                <p data-aos-duration="1000" data-aos="fade-up">
+                    I had expertise in developing web and mobile apps. I had developed more than 20 apps. I had also
+                    worked with AWS and firebase.
+                    According to me Don't fix problems fix your thinking problems will be fixed by themselves.
+                </p>
+                <div class="row" data-aos-duration="1000" data-aos="fade-up">
+                    <div class="col-12 col-md-6">
+                        <ul>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Read me:
+                            </span>
+                                ViceVersa 🤪
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Mobile:
+                            </span>
+                                <a href="tel:+91 7024415907">+91 7024415907</a>
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Email:
+                            </span>
+                                <a href="mailto:gploswal@gmail.com">
+                                    gploswal@gmail.com
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Location:
+                            </span>
+                                Indore, India
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Open to work:
+                            </span>
+                                Available
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Linkedin:
+                            </span>
+                                <a href="https://www.linkedin.com/in/oswalgopal/">
+                                    https://www.linkedin.com/in/oswalgopal/
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Github:
+                            </span>
+                                <a href="https://github.com/oswalgopal">
+                                    https://github.com/oswalgopal
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Codechef:
+                            </span>
+                                <a href="https://www.codechef.com/users/gploswal">
+                                    codechef.com/users/gploswal
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                LeetCode:
+                            </span>
+                                <a href="https://leetcode.com/oswalgopal/">
+                                    https://leetcode.com/oswalgopal/
+                                </a>
+                            </li>
+                            <li class="mt-3">
+                            <span class="text-bold">
+                                Stackoverflow:
+                            </span>
+                                <a href="https://stackoverflow.com/users/11743537/gopal-oswal">
+                                    stackoverflow.com/.../gopal-oswal
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p data-aos-duration="1000" data-aos="fade-up">
+                    Have a Idea or wanna build a project?
+                    Any problem or Query regarding any project?
+                    Need any guidance or advice on any tech domain ?
+                    Connect me on <a href="#contact">Contact Section</a>
+                    or Send me a <a href="mailto:gploswal@gmail.com">mail</a>
+                    Let's a have some tea with me. We will build together and will have fun.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="sections">
+    <div class="container">
+        <h2 data-aos-duration="1000" data-aos="fade-up">What I do</h2>
+        <p class="info" data-aos-duration="1000" data-aos="fade-up">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eos officia quae rem saepe sed. Ducimus
+            expedita fuga libero nobis odit perspiciatis, quia rem sit tempora unde! Ab, quibusdam similique!
+        </p>
+        <div class="d-flex justify-content-center">
+            <div class="row width-75" data-aos-duration="1000" data-aos="fade-up">
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/react.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/react%20native.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/angular.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/ionic.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/node.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/AI.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/PS.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/cpp.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/python.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/flask.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/django.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/java.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/git.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/mongodb.png" alt="" width="150" height="90">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 d-flex justify-content-center align-item-center mt-2 mb-2">
+                    <img src="./img/skills/sql.png" alt="" width="150" height="90">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="projects" class="sections">
+    <div class="container">
+        <h2 data-aos-duration="1000" data-aos="fade-up">Projects</h2>
+        <p class="info" data-aos-duration="1000" data-aos="fade-up">
+            Developing a good work ethic is key. Apply yourself at whatever you do, whether you're a janitor or taking
+            your first summer job because that work ethic will be reflected in everything you do in life.
+        </p>
+        <ul class="nav nav-pills justify-content-center" id="myTab" role="tablist" data-aos-duration="1000"
+            data-aos="fade-up">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
+                        role="tab" aria-controls="home" aria-selected="true">All
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button"
+                        role="tab" aria-controls="profile" aria-selected="false">Web
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile" type="button"
+                        role="tab" aria-controls="contact" aria-selected="false">Mobile
+                </button>
+            </li>
+<!--            <li class="nav-item" role="presentation">-->
+<!--                <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" type="button"-->
+<!--                        role="tab" aria-controls="contact" aria-selected="false">Design-->
+<!--                </button>-->
+<!--            </li>-->
+        </ul>
+        <div class="d-flex justify-content-center">
+            <div class="tab-content width-75 mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <div class="row">
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Builder%20Design.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ulike.png" class="project-img" alt="" width="572px" height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ravi%20K%20Das.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Pai%20Pai%20Hisab.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDS.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Komal%20Bricks.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/OPM.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDERP.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/MarkMate%20App.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Untap.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Instago.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Device%20Info.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/School%20Art.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Koetter%20Wood.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Website%20Builder.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/XcellMart.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Lets%20Connect.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/NotesPedia.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Treblo.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Umate.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
+                    <div class="row">
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Builder%20Design.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Komal%20Bricks.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/OPM.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDERP.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/School%20Art.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Koetter%20Wood.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Website%20Builder.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Treblo.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Umate.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="mobile" role="tabpanel" aria-labelledby="mobile-tab">
+                    <div class="row">
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ulike.png" class="project-img" alt="" width="572px" height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ravi%20K%20Das.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Pai%20Pai%20Hisab.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDS.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDERP.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/MarkMate%20App.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Untap.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Instago.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Device%20Info.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/XcellMart.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Lets%20Connect.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/NotesPedia.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--                <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">-->
+
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="resume" class="sections">
+    <div class="container">
+        <h2 data-aos-duration="1000" data-aos="fade-up">Resume</h2>
+        <p class="info" data-aos-duration="1000" data-aos="fade-up">
+            <!--Our Resume says <strong>alot</strong> about <strong>us</strong>. It
+            <strong>determines</strong> whether we will be called <strong>IN</strong>
+            for an Interview or <strong>Not</strong>.-->
+            One of the best pieces of advice I ever got was from a horse master. He told me to go slow to go fast. I
+            think that applies to everything in life. We live as though there aren't enough hours in the day but if we
+            do each thing calmly and carefully we will get it done quicker and with much less stress.
+        </p>
+        <div class="row">
+            <div class="col-12 col-md-6 mt-3 p-3">
+                <h4 class="text-bold" data-aos-duration="1000" data-aos="fade-up">Education</h4>
+                <div class="timeline mt-4" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>12th (PCM)</h4>
+                    <p>2017-18</p>
+                    <h5>Gokuldas Public School, Khargone</h5>
+                </div>
+                <div class="timeline" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Btech + Mtech (IT) (5 yr)</h4>
+                    <p>2018- Present</p>
+                    <h5>IIPS DAVV, Indore</h5>
+
+                </div>
+                <h4 class="text-bold mt-4" data-aos-duration="1000" data-aos="fade-up">Achievements</h4>
+                <div class="timeline mt-4" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Winner In Invento Hackathon</h4>
+                    <!--                        <p>2017-18</p>-->
+                    <p>IET DAVV, Indore</p>
+                    <p>
+                        We created a image proccessing tool which convert low light image into high light image. I
+                        worked on frontend part of the project.
+                    </p>
+                </div>
+                <div class="timeline" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Winner at Be A Coder</h4>
+                    <!--                        <p>2017-18</p>-->
+                    <p>Graffersid, Indore</p>
+                    <p>
+                        It's 4hr Hackathon organized by Graffersid which had challenges on reactjs. The challenge was
+                        actually to build web app with a dummy JSON.
+                    </p>
+                </div>
+                <h4 class="text-bold mt-4" data-aos-duration="1000" data-aos="fade-up">Other Achievements</h4>
+                <div class="timeline mt-4" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>3 * coder at codechef</h4>
+                    <p>12/2020 - Present</p>
+                    <p>
+                        <a href="https://www.codechef.com/users/gploswal" target="_blank">https://www.codechef.com/users/gploswal</a>
+                    </p>
+                </div>
+                <div class="timeline" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>2 * coder at Leetcode</h4>
+                    <p>12/2020 - Present</p>
+                    <p>
+                        <a href="https://leetcode.com/oswalgopal/" target="_blank">https://leetcode.com/oswalgopal/</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3 p-3">
+                <h4 class="text-bold" data-aos-duration="1000" data-aos="fade-up">Work Experience</h4>
+                <div class="timeline mt-4" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Frontend developer Intern</h4>
+                    <p>03/2019 - 05/2019</p>
+                    <h5>Maven Software and Research, Indore</h5>
+                    <ul>
+                        <li>
+                            I had polished my html css by building static websites.
+                        </li>
+                        <li>
+                            I learned Angular and developed an angular app named
+                            SQL Posgresql Flask Django
+                            Adobe Photoshop
+                            Git + Github AWS Adobe Illustrator
+                            Builder Designs.
+                        </li>
+                    </ul>
+                </div>
+                <div class="timeline" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Frontend Developer Intern</h4>
+                    <p>05/2019 - 02/2020</p>
+                    <h5>Kritin Digital Solutions Pvt. Ltd, Indore</h5>
+                    <ul>
+                        <li> I learned Ionic, React and React Native.</li>
+                        <li> Developed mobile apps like Ulike Mobile, Ravi K das, Pai Pai, KDS and web admin panel for
+                            each in Angular.
+                        </li>
+                        <li> Learned Posgresql and designed the database for Komal Bricks App.</li>
+                        <li> I developed OPM in React and a mobile app KDERP in React Native.</li>
+                    </ul>
+                </div>
+                <div class="timeline" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Full Stack Developer Intern</h4>
+                    <p>02/2020 - 09/2020</p>
+                    <h5>Protonshub Technologies, Indore</h5>
+                    <ul>
+                        <li> I developed MarkMate App, Untap, Instago, DeviceInfo in React Native.</li>
+                        <li> I worked on School Art a designing app in react with fabric js.</li>
+                        <li> I developed Koetter Wood web app in Angular.</li>
+                    </ul>
+                </div>
+                <div class="timeline" data-aos-duration="1000" data-aos="fade-up">
+                    <h4>Full Stack Developer</h4>
+                    <p>10/2020 - 12/2020</p>
+                    <h5>Freelancer</h5>
+                    <ul>
+                        <li> I developed a Website Builder app in React.</li>
+                        <li> Redeveloped the updated version for Xcellmart mobile app.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="sections">
+    <div class="container">
+        <h2 data-aos-duration="1000" data-aos="fade-up">Contact</h2>
+        <div class="row mt-3" data-aos-duration="1000" data-aos="fade-up">
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-item-center">
+                    <div class="contact_logo">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="d-flex justify-content-center flex-column">
+                        <h4 class="mb-0">Email: </h4>
+                        <p class="mb-0">gploswal@gmail.com</p>
+                    </div>
+                </div>
+                <div class="d-flex  align-item-center">
+                    <div class="contact_logo">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <div class="d-flex justify-content-center flex-column">
+                        <h4 class="mb-0">Mobile: </h4>
+                        <p class="mb-0">+91 7024415907</p>
+                    </div>
+                </div>
+                <div class="d-flex align-item-center">
+                    <div class="contact_logo">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="d-flex justify-content-center flex-column">
+                        <h4 class="mb-0">Location: </h4>
+                        <p class="mb-0">Indore, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <form class="p-2" data-aos-duration="1000" data-aos="fade-up" onsubmit="sendMail(event)">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Name" required id="name">
+                        </div>
+                        <div class="col">
+                            <input type="text" pattern="[789][0-9]{9}" class="form-control" placeholder="Phone (valid 10 digit number)" required id="phone">
+                        </div>
+                    </div>
+                    <input type="text" class="form-control mt-2" placeholder="Subject" required id="subject">
+                    <textarea name="" cols="30" rows="5" placeholder="Message..." class="form-control mt-2"
+                              required id="message"></textarea>
+                    <div class="d-flex justify-content-center p-3">
+                        <button type="submit" class="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <svg viewBox="0 0 120 28">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+                <feColorMatrix in="blur" mode="matrix" values="
+           1 0 0 0 0
+           0 1 0 0 0
+           0 0 1 0 0
+           0 0 0 13 -9" result="goo"/>
+                <xfeBlend in="SourceGraphic" in2="goo"/>
+            </filter>
+            <path id="wave"
+                  d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"/>
+        </defs>
+
+        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+
+    </svg>
+</footer>
+<!--<div class="navIcon">-->
+<!--    -->
+<!--</div>-->
+<!--<div id="stop" class="scrollTop">-->
+<!--    <i class="fas fa-chevron-up"></i>-->
+<!--</div>-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // declare variable
+    var scrollTop = $(".scrollTop");
+
+    $(window).scroll(function () {
+        // declare variable
+        var topPos = $(this).scrollTop();
+
+        // if user scrolls down - show scroll to top button
+        if (topPos > 100) {
+            $(scrollTop).css("opacity", "1");
+        } else {
+            $(scrollTop).css("opacity", "0");
+        }
+
+    }); // scroll END
+    //Click event to scroll to top
+    $(scrollTop).on('click', function () {
+        /*$('html, body').animate({
+            scrollTop: 0
+        }, 800);*/
+        alert('asdfj')
+    });
+
+    var app = document.getElementById('typeabletext');
+    var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 75,
+    });
+    typewriter
+        .pauseFor(300)
+        .typeString('Full Stack Developer')
+        .pauseFor(300)
+        .deleteAll()
+        .typeString('Web Designer')
+        .pauseFor(300)
+        .deleteAll()
+        .typeString('Competitive Programmer')
+        .pauseFor(300)
+        .start();
+
+    AOS.init();
+    setTimeout(() => {
+        if (localStorage.getItem('intro') !== 'true') {
+            localStorage.setItem('intro', 'true');
+            $('#intro').show(1000, 'linear');
+            $('#intro').css('display', 'flex');
+            $('.change_mod').css('position', 'fixed');
+        }
+    }, 5000);
+
+    function closeIntro() {
+        $('#intro').hide(1000);
+        $('.change_mod').css('position', 'absolute');
+    }
+    function sendMail(ev) {
+        ev.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        window.open(`mailto:gploswal@gmail.com?subject=${subject}&body=${
+            'I am ' + name + ' ' + phone + '. ' +
+            message}`);
+    }
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -149,7 +149,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            animation:  playIconAnimation1; 
+            animation:  playIconAnimation1;
             animation-duration: 3s;
             animation-iteration-count: infinite;
         }
@@ -161,9 +161,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            animation:  playIconAnimation2; 
+            animation:  playIconAnimation2;
             animation-duration: 3s;
-            animation-iteration-count: infinite;    
+            animation-iteration-count: infinite;
         }
         @media only screen and (max-width: 600px) {
             #unblocker1 {
@@ -184,7 +184,7 @@
             .playBtn1 {
                 display: unset;
                 z-index: 100000;
-            }   
+            }
         }
         @keyframes interaction_animation {
             0%{
@@ -277,7 +277,7 @@
                     <div class="playIconWrapper1">
                         <i class="far fa-play-circle playIcon"></i>
                     </div>
-                </div>  
+                </div>
             </div>
             <br />
 			<span class="playBtn" style="font-size:36px; font-weight: bold;">Click to play</span>
@@ -291,10 +291,10 @@
             <br />
         </div>
         <div class="mobile_instructions">
-            Your mobile browser is not able to render 3D view 
+            Your mobile browser is not able to render 3D view
             <br />
             Please try on computer devices
-        </div>    
+        </div>
             <div class="contact">
                 <h3>Connect me on</h1>
                 <a href="https://github.com/oswalgopal" target="_blank">
@@ -329,7 +329,7 @@
     <script src="js/custom/instruction_popup.js"></script>
     <script src="js/custom/showField.js"></script>
     <script src="js/custom/ShowGarden.js"></script>
-    
+
     <script>
         document.onreadystatechange = function () {
         var state = document.readyState
@@ -344,7 +344,7 @@
         }
         }
         function switchMode() {
-            window.open('index.html', "_self");
+            window.open('cli.html', "_self");
         }
         const objects = [];
         let raycaster;
@@ -396,9 +396,9 @@
         var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 5000);
         camera.position.y = 40;
         camera.position.x = 0;
-        camera.position.z = 0;        
-        // creating a renderer 
-        var renderer = new THREE.WebGLRenderer(); 
+        camera.position.z = 0;
+        // creating a renderer
+        var renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.shadowMap.enabled = true;
         // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -408,8 +408,8 @@
         // light.position.set(50, 500, 22);
         // light.target.position.set(300, 400, 200);
 
-        // light.shadow.camera.near = 0.5;       
-        // light.shadow.camera.far = 5000;      
+        // light.shadow.camera.near = 0.5;
+        // light.shadow.camera.far = 5000;
         // light.shadow.camera.left = -500;
         // light.shadow.camera.bottom = -500;
         // light.shadow.camera.right = 500;
@@ -432,14 +432,14 @@
         // const helper = new THREE.CameraHelper( light.shadow.camera );
         // scene.add( helper );
 
-        // handling change in screen size 
+        // handling change in screen size
         window.addEventListener('resize', function(){
             var width = window.innerWidth;
             var height = window.innerHeight;
             renderer.setSize(width, height);
             // to keep the aspect ratior of camera
             camera.aspect = width / height;
-            camera.updateProjectionMatrix(); 
+            camera.updateProjectionMatrix();
         });
 
         // added controls
@@ -564,7 +564,7 @@
         document.addEventListener( 'keyup', onKeyUp );
 
         // ================================================================ SKY STARTS ================================================================
-        // var skyGeo = new THREE.SphereGeometry(100000, 25, 25); 
+        // var skyGeo = new THREE.SphereGeometry(100000, 25, 25);
         // var loader  = new THREE.TextureLoader(),
         // texture = loader.load( "img/sky.jpeg" );
         // var material = new THREE.MeshPhongMaterial({ map: texture,});
@@ -585,7 +585,7 @@
             bevelThickness: 2,
             bevelSize: 1,
             bevelEnabled: true
-        } 
+        }
         );
 
         textGeo.computeBoundingBox();
@@ -602,7 +602,7 @@
         // mesh.receiveShadow = true;
         scene.add( text );
         });
-        
+
         const planeMaterial = new THREE.MeshBasicMaterial( { color: 0x6b7d8d } );
         const cubes1 = new THREE.Mesh( new THREE.BoxGeometry( 300, 20, 20 ), planeMaterial );
 		cubes1.position.x = 200;
@@ -643,7 +643,7 @@
         // }
 
 
-        // rendering to html 
+        // rendering to html
         renderer.render( scene, camera );
         document.body.appendChild( renderer.domElement );
         animate();
