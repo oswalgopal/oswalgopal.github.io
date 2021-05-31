@@ -60,7 +60,7 @@
 </section>
 <section id="about" class="sections">
     <div class="container">
-        <h2 data-aos-duration="1000" data-aos="fade-up">About</h2>
+        <h2 class="magnify_text" data-aos-duration="1000" data-aos="fade-up">About</h2>
         <p class="info" data-aos-duration="1000" data-aos="fade-up">
             I am tech enthusiast with expertise in web and mobile app development. I love to explore new technologies. I
             likes to dig into project requirement and completes them with modern technologies in a very efficient way. I
@@ -178,7 +178,7 @@
 
 <section id="skills" class="sections">
     <div class="container">
-        <h2 data-aos-duration="1000" data-aos="fade-up">What I do</h2>
+        <h2 class="magnify_text" data-aos-duration="1000" data-aos="fade-up">What&nbsp;I&nbsp;do</h2>
         <p class="info" data-aos-duration="1000" data-aos="fade-up">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eos officia quae rem saepe sed. Ducimus
             expedita fuga libero nobis odit perspiciatis, quia rem sit tempora unde! Ab, quibusdam similique!
@@ -236,7 +236,7 @@
 </section>
 <section id="projects" class="sections">
     <div class="container">
-        <h2 data-aos-duration="1000" data-aos="fade-up">Projects</h2>
+        <h2 class="magnify_text" data-aos-duration="1000" data-aos="fade-up">Projects</h2>
         <p class="info" data-aos-duration="1000" data-aos="fade-up">
             Developing a good work ethic is key. Apply yourself at whatever you do, whether you're a janitor or taking
             your first summer job because that work ethic will be reflected in everything you do in life.
@@ -576,7 +576,7 @@
 
 <section id="resume" class="sections">
     <div class="container">
-        <h2 data-aos-duration="1000" data-aos="fade-up">Resume</h2>
+        <h2 class="magnify_text" data-aos-duration="1000" data-aos="fade-up">Resume</h2>
         <p class="info" data-aos-duration="1000" data-aos="fade-up">
             <!--Our Resume says <strong>alot</strong> about <strong>us</strong>. It
             <strong>determines</strong> whether we will be called <strong>IN</strong>
@@ -691,7 +691,7 @@
 </section>
 <section id="contact" class="sections">
     <div class="container">
-        <h2 data-aos-duration="1000" data-aos="fade-up">Contact</h2>
+        <h2 class="magnify_text" data-aos-duration="1000" data-aos="fade-up">Contact</h2>
         <div class="row mt-3" data-aos-duration="1000" data-aos="fade-up">
             <div class="col-12 col-md-4">
                 <div class="d-flex align-item-center">
@@ -766,6 +766,7 @@
 
     </svg>
 </footer>
+<div class="cursor"></div>
 <!--<div class="navIcon">-->
 <!--    -->
 <!--</div>-->
@@ -782,6 +783,54 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    const element = document.querySelectorAll(".magnify_text");
+    element.forEach((el) => {
+        el.innerHTML = el.innerText
+            .split("")
+            .map((letter) => `<span class="effect">${letter}</span>`)
+            .join("");
+    })
+    const smalltxt = document.querySelectorAll("p");
+    smalltxt.forEach((el) => {
+        el.innerHTML = el.innerText
+            .split(" ")
+            .map((letter) => {
+                // if (letter === ' ') {
+                //     console.log('called space');
+                //     return `<span class="effect2">&nbsp;</span>`
+                // } else {
+                    return `<span class="effect2">${letter}</span>`;
+                // }
+            })
+            .join(" ");
+    })
+    const li = document.querySelectorAll("li");
+    li.forEach((el) => {
+        // removing tab navigation
+        if (!el.hasAttribute('role')) {
+            el.innerHTML = el.innerText
+                .split(" ")
+                .map((letter) => `<span class="effect2">${letter}</span>`)
+                .join(" ");
+        }
+    })
+
+    const h4 = document.querySelectorAll("h4");
+    h4.forEach((el) => {
+        el.innerHTML = el.innerText
+            .split(" ")
+            .map((letter) => `<span class="effect3">${letter}</span>`)
+            .join(" ");
+    })
+
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", (e) => {
+        let mouse_x = e.clientX;
+        let mouse_y = e.clientY;
+        cursor.style.left = `${mouse_x}px`;
+        cursor.style.top = `${mouse_y}px`;
+    });
+
     // declare variable
     var scrollTop = $(".scrollTop");
 
