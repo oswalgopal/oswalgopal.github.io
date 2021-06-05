@@ -41,7 +41,7 @@
 <section id="home" class="bg d-flex flex-column justify-content-center">
     <div class="container name_container" data-aos="fade-left" data-aos-duration="1000">
         <h1>Gopal Oswal</h1>
-        <p>I'm <span id="typeabletext">FullStack Developer</span></p>
+        <p role="typewriter">I'm <span id="typeabletext">FullStack Developer</span></p>
         <div>
             <a href="https://github.com/oswalgopal" target="_blank">
                 <i class="fab fa-github-square"></i>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <ul>
-                            <li class="mt-3">
+                            <li class="mt-3" role="link">
                             <span class="text-bold">
                                 Linkedin:
                             </span>
@@ -128,7 +128,7 @@
                                     https://www.linkedin.com/in/oswalgopal/
                                 </a>
                             </li>
-                            <li class="mt-3">
+                            <li class="mt-3" role="link">
                             <span class="text-bold">
                                 Github:
                             </span>
@@ -136,7 +136,7 @@
                                     https://github.com/oswalgopal
                                 </a>
                             </li>
-                            <li class="mt-3">
+                            <li class="mt-3" role="link">
                             <span class="text-bold">
                                 Codechef:
                             </span>
@@ -144,7 +144,7 @@
                                     codechef.com/users/gploswal
                                 </a>
                             </li>
-                            <li class="mt-3">
+                            <li class="mt-3" role="link">
                             <span class="text-bold">
                                 LeetCode:
                             </span>
@@ -152,7 +152,7 @@
                                     https://leetcode.com/oswalgopal/
                                 </a>
                             </li>
-                            <li class="mt-3">
+                            <li class="mt-3" role="link">
                             <span class="text-bold">
                                 Stackoverflow:
                             </span>
@@ -792,17 +792,19 @@
     })
     const smalltxt = document.querySelectorAll("p");
     smalltxt.forEach((el) => {
-        el.innerHTML = el.innerText
-            .split(" ")
-            .map((letter) => {
-                // if (letter === ' ') {
-                //     console.log('called space');
-                //     return `<span class="effect2">&nbsp;</span>`
-                // } else {
+        if (!el.hasAttribute('role')) {
+            el.innerHTML = el.innerText
+                .split(" ")
+                .map((letter) => {
+                    // if (letter === ' ') {
+                    //     console.log('called space');
+                    //     return `<span class="effect2">&nbsp;</span>`
+                    // } else {
                     return `<span class="effect2">${letter}</span>`;
-                // }
-            })
-            .join(" ");
+                    // }
+                })
+                .join(" ");
+        }
     })
     const li = document.querySelectorAll("li");
     li.forEach((el) => {
