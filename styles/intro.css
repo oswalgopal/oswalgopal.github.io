@@ -13,6 +13,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 .intro h1 {
     color: var(--theme-text);

@@ -469,10 +469,41 @@
             instruction_sound.setLoop( false );
             instruction_sound.setVolume( 1 );
         });
+        const listener = new THREE.AudioListener();
+        camera.add( listener );
+
+        // create a global audio source
+        const sound = new THREE.Audio( listener );
+
+        // load a sound and set it as the Audio object's buffer
+        const audioLoader2 = new THREE.AudioLoader();
+        audioLoader2.load( '../../sound/Project IGI - ingame - 07.mp3', function( buffer ) {
+            sound.setBuffer( buffer );
+            sound.setLoop( true );
+            sound.setVolume( 0.3 );
+            // sound.play();
+        });
+        // create a global audio source
+        const sound2 = new THREE.Audio( listener );
+
+        // load a sound and set it as the Audio object's buffer
+        const audioLoader3 = new THREE.AudioLoader();
+        audioLoader3.load( '../../sound/foot.mp3', function( buffer ) {
+            sound2.setBuffer( buffer );
+            sound2.setLoop( false );
+            sound2.setVolume( 1.5 );
+        });
+
+        controls.addEventListener( 'unlock', function () {
+            // blocker.style.display = 'block';
+            // instructions.style.display = '';
+            sound.stop();
+        });
 
         instructions.addEventListener( 'click', function () {
             setDayMode();
 			controls.lock();
+            sound.play();
 		} );
 
 		controls.addEventListener( 'lock', function () {
@@ -504,25 +535,25 @@
             case 'ArrowUp':
             case 'KeyW':
                 moveForward = true;
-                // playWalkSound(camera);
+                sound2.play();
                 break;
 
             case 'ArrowLeft':
             case 'KeyA':
                 moveLeft = true;
-                // playWalkSound(camera);
+                sound2.play();
                 break;
 
             case 'ArrowDown':
             case 'KeyS':
                 moveBackward = true;
-                // playWalkSound(camera);
+                sound2.play();
                 break;
 
             case 'ArrowRight':
             case 'KeyD':
                 moveRight = true;
-                // playWalkSound(camera);
+                sound2.play();
                 break;
 
             case 'Space':
