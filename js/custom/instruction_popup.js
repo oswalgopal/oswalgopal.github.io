@@ -119,7 +119,7 @@ function showProjectText() {
         document.addEventListener("keyup", ev => {
             console.log(ev);
             if (ev.code === 'ShiftLeft' ||  ev.code === 'ShiftRight') {
-                window.open('resume');
+                showResume();
             }
         })
         setTimeout(() => {
@@ -140,7 +140,7 @@ function showSkillText() {
     document.addEventListener("keyup", ev => {
         console.log(ev);
         if (ev.code === 'ShiftLeft' ||  ev.code === 'ShiftRight') {
-            window.open('resume');
+            showResume();
         }
     })
     setTimeout(() => {
@@ -159,4 +159,8 @@ function typeWriterWrapper(txt){
         setTimeout(typeWriter, speed);
     }
     }
+}
+
+function showResume() {
+    window.open('https://docs.google.com/document/d/1Xvem4Hrvac1p8wQWxZZhP3R-yJq0BuGeGw5Ziki1Xjw/edit?usp=sharing');
 }

@@ -385,7 +385,8 @@ const showAchievements = () => {
 }
 
 const downloadResume = () => {
-    window.open('https://drive.google.com/file/d/1riFXkwagAU0fWg8jjp_WqWTzCFdtTzrm/view?usp=sharing');
+    // window.open('https://drive.google.com/file/d/1riFXkwagAU0fWg8jjp_WqWTzCFdtTzrm/view?usp=sharing');
+    window.open('https://docs.google.com/document/d/1Xvem4Hrvac1p8wQWxZZhP3R-yJq0BuGeGw5Ziki1Xjw/edit?usp=sharing');
 }
 
 const handleDocs = command => {
@@ -398,7 +399,7 @@ const handleDocs = command => {
                 handleInput(command2);
             });
         } else if (command2 === 'git') {
-            window.open('https://docs.google.com/document/d/1ZgJuzy3BMt3qv_0NJoCIeoCXCxV03dKs2Hgcq5fAWQs/edit?usp=sharing')
+            window.open('https://docs.google.com/document/d/1ZgJuzy3BMt3qv_0NJoCIeoCXCxV03dKs2Hgcq5fAWQs/edit?usp=sharing');
             myTerminal.print('hey Thanks. Hope you get to learn something good :)');
             myTerminal.print('--------------------------------------------------------');
             myTerminal.input('', command2 => {
@@ -413,4 +414,3 @@ const handleDocs = command => {
         }
     })
 }
-
