@@ -429,3 +429,8 @@ svg {
     color: var(--theme-color);
     transition: all 0.5s ease;
 }
+
+#projects img {
+    width: 100% !important;
+    height: 100% !important;
+}

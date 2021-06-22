@@ -1,0 +1,327 @@
+<!--         <ul class="nav nav-pills justify-content-center" id="myTab" role="tablist" data-aos-duration="1000"
+            data-aos="fade-up">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
+                        role="tab" aria-controls="home" aria-selected="true">All
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button"
+                        role="tab" aria-controls="profile" aria-selected="false">Web
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile" type="button"
+                        role="tab" aria-controls="contact" aria-selected="false">Mobile
+                </button>
+            </li>
+        </ul>
+        <div class="d-flex justify-content-center">
+            <div class="tab-content width-75 mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <div class="row">
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Builder%20Design.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ulike.png" class="project-img" alt="" width="572px" height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ravi%20K%20Das.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Pai%20Pai%20Hisab.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDS.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Komal%20Bricks.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/OPM.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDERP.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/MarkMate%20App.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Untap.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Instago.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Device%20Info.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/School%20Art.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Koetter%20Wood.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Website%20Builder.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/XcellMart.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Lets%20Connect.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/NotesPedia.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Treblo.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Umate.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
+                    <div class="row">
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Builder%20Design.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Komal%20Bricks.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/OPM.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDERP.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/School%20Art.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Koetter%20Wood.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Website%20Builder.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Treblo.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Umate.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="mobile" role="tabpanel" aria-labelledby="mobile-tab">
+                    <div class="row">
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ulike.png" class="project-img" alt="" width="572px" height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Ravi%20K%20Das.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Pai%20Pai%20Hisab.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDS.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/KDERP.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/MarkMate%20App.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Untap.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Instago.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Device%20Info.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/XcellMart.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/Lets%20Connect.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                        <div class="col-md-3 col-12 d-flex justify-content-center" data-aos-duration="1000" data-aos="fade-up">
+                            <div class="pin"></div>
+                            <div class="line left-rotate"></div>
+                            <div class="line right-rotate"></div>
+                            <img src="./img/projects/NotesPedia.png" class="project-img" alt="" width="572px"
+                                 height="344px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--                <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">-->
+
+<!--                </div>-->
+            <!-- </div>
+        </div>
+    </div>
+</section> -->
