@@ -18,6 +18,10 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
+<div class="theme-mode" id="theme-mode" onclick="changeTheme()">
+    <i class="fas fa-sun" id="sun" title="Switch to dark mode"></i>
+    <i class="fas fa-moon" id="moon" title="Switch to light mode"></i>
+</div>
 <div class="intro" id="intro">
     <h1>Open Portfolio in </h1>
     <p title="Cli Mode" role="mode">
@@ -603,6 +607,25 @@
         window.open(`mailto:gploswal@gmail.com?subject=${subject}&body=${
             'I am ' + name + ' ' + phone + '. ' +
             message}`);
+    }
+    const theme_mode = document.getElementById('theme-mode');
+    const moon = document.getElementById('moon');
+    const sun = document.getElementById('sun');
+    var curr_mode = 'dark';
+    function changeTheme() {
+        if (curr_mode === 'light') {
+            moon.style.display = 'none';
+            sun.style.display = 'block';
+            curr_mode = 'dark';
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        } else {
+            sun.style.display = 'none';
+            moon.style.display = 'block';
+            curr_mode = 'light';
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
     }
 </script>
 </body>
