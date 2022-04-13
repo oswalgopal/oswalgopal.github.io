@@ -386,7 +386,7 @@ const showAchievements = () => {
 
 const downloadResume = () => {
     // window.open('https://drive.google.com/file/d/1riFXkwagAU0fWg8jjp_WqWTzCFdtTzrm/view?usp=sharing');
-    window.open('https://docs.google.com/document/d/1Xvem4Hrvac1p8wQWxZZhP3R-yJq0BuGeGw5Ziki1Xjw/edit?usp=sharing');
+    window.open('https://drive.google.com/file/d/1jRudaVnjZe5oMmL_FvTIn7e6raTeqIsW/view');
 }
 
 const handleDocs = command => {
